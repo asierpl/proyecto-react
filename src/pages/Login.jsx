@@ -34,7 +34,7 @@ export const Login = () => {
             }
         }
 
-        fetch('http://localhost:3000/' , options)
+        fetch(VITE_URL_API , options)
         .then( res => res.json() )
         .then( data => {
             
