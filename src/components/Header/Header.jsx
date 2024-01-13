@@ -7,16 +7,16 @@ const { VITE_URL_API } = import.meta.env
 
 export const Header = () => {
     
-    const [ headerDatos , setHeaderDatos ] = useState({ headerLogo : {} , headerNav : []})
+    const [ datos , setDatos ] = useState({ headerLogo : {} , headerNav : [] })
 
     useEffect (()=> {
         fetch(`${VITE_URL_API}/gestor`)
         .then( res => res.json() )
-        .then( data => {console.log("Data:" , data), setHeaderDatos(data)})  
+        .then( data => {console.log("Data:" , data), setDatos(data)})  
         .catch( error => console.log( error ))
     } , [] )
 
-    const { bonanza , partner , canonAlt , canonSrc } = headerDatos.headerLogo
+    const { bonanza , partner , canonAlt , canonSrc } = datos.headerLogo
 
 
     return (
@@ -39,7 +39,7 @@ export const Header = () => {
 
             <nav className="Header-nav">
                 <ul className="HeaderNav-ul">
-                    {headerDatos.headerNav.map (eachLi =>
+                    {datos.headerNav.map (eachLi =>
                         <HeaderNav key={eachLi.id} {...eachLi} /> 
                     )}
                 </ul>

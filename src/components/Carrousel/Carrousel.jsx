@@ -1,17 +1,29 @@
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import './Carrousel.css'
-import { proyectoFinal } from '../../bbdd'
-const { carrousel } = proyectoFinal
-const {} = carrousel
+// import { proyectoFinal } from '../../bbdd'
+// const { carrousel } = proyectoFinal
+// const {} = carrousel
+
+const { VITE_URL_API } = import.meta.env
 
 export const Carrousel = () => {
 
     const [ active , setActive ] = useState(0)
+    
+    const [ datos , setDatos ] = useState({ carrousel : []})
+
+    useEffect( () => {
+        fetch( `${VITE_URL_API}/gestor` )
+        .then( res => res.json() ) 
+        .then( data => { console.log("Data" , data) ,
+         setDatos(data)} )
+        .catch( error => console.log(error) )
+    }, [] )
 
     const rightHandler = () => {
         setActive( active + 1 )
 
-        if ( active >= carrousel.length - 1 ) {
+        if ( active >= datos.carrousel.length - 1 ) {
             setActive(0)
         }
     }
@@ -20,7 +32,7 @@ export const Carrousel = () => {
         setActive( active - 1 )
 
         if ( active <= 0 ) {
-            setActive( carrousel.length - 1 )
+            setActive( datos.carrousel.length - 1 )
         }
     }
 
@@ -29,12 +41,12 @@ export const Carrousel = () => {
         <div className="Carrousel">
             <div className="Carrousel-container"
                 style={{
-                    width : `${ carrousel.length * 100 }%`,
-                    gridTemplateColumns : `repeat( ${ carrousel.length } , 1fr )`,
-                    transform : `translateX( -${ active * (100/carrousel.length) }%)`,
+                    width : `${ datos.carrousel.length * 100 }%`,
+                    gridTemplateColumns : `repeat( ${ datos.carrousel.length } , 1fr )`,
+                    transform : `translateX( -${ active * (100/datos.carrousel.length) }%)`,
                 }}
                 >
-                {carrousel.map ( eachImg => 
+                {datos.carrousel.map ( eachImg => 
                     <Photos 
                     key={eachImg.id}
                     {...eachImg} />)}
