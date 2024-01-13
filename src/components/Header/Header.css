@@ -8,10 +8,10 @@
     flex-flow: row nowrap;
     justify-content: space-between;
 
-    background-color: aqua;
+    background-color: rgb(157, 247, 247);
 }
 .Bonanza{
-    background-color: rgb(167, 167, 230);
+    background-color: rgb(163, 163, 245);
 }
 .Bonanza-h1{
 
@@ -21,10 +21,10 @@
 }
 
 .Canon{
-    background-color: rgb(236, 94, 94);
+    background-color: rgb(236, 222, 94);
 }
 .Canon-img{
-    background-color: brown;
+    background-color: rgb(219, 80, 80);
 }
 
 .Header-nav{
