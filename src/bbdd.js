@@ -26,7 +26,7 @@ export const proyectoFinal = {
         },
         {
             id  : uuidv4(),
-            src : "/assets/impresora.jpg",
+            src : "/assets/impresora2.jpg",
             alt : "imagen"
         },
     ]
