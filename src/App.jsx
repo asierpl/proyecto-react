@@ -9,10 +9,9 @@ function App() {
   return (
     <BrowserRouter>
     <>
-      <h1>Proyecto final</h1>
       <Routes>
-        <Route path='/' element={<Login/>}/>
-        <Route path='/gestor' element={<Gestor/>}/>
+        <Route path='/'       element={ <Login/>  }/>
+        <Route path='/gestor' element={ <Gestor/> }/>
       </Routes>
     </>
     </BrowserRouter>

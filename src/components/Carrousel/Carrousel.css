@@ -1,0 +1,39 @@
+.Carrousel{
+    width: 100%;
+    /* max-width: 37.5rem; */
+    
+    position: relative;
+    overflow: hidden;
+    background-color: rgb(159, 89, 224);
+}
+.Carrousel-container{
+    background-color: rgb(228, 96, 96);
+    min-height: 70vh;
+    transition: all .5s ease;
+    display: grid;
+    
+}
+.Photos{
+    min-height: 30rem;
+    max-height: 32rem;
+    background-color: blue;
+    
+}
+
+.Boton-right{
+    width: 4rem;
+    height: 4rem;
+    background-color: yellow;
+    position: absolute;
+    top: calc( 50% - 2rem );
+    right: 0;
+    
+}
+.Boton-left{
+    width: 4rem;
+    height: 4rem;
+    background-color: yellow;
+    position: absolute;
+    top: calc( 50% - 2rem );
+    left: 0;
+}

@@ -1,0 +1,66 @@
+import { useEffect, useState } from 'react'
+import './Header.css'
+
+const { VITE_URL_API } = import.meta.env
+
+
+
+export const Header = () => {
+    
+    const [ headerDatos , setHeaderDatos ] = useState({ headerLogo : {} , headerNav : []})
+
+    useEffect (()=> {
+        fetch(`${VITE_URL_API}/gestor`)
+        .then( res => res.json() )
+        .then( data => {console.log("Data:" , data), setHeaderDatos(data)})  
+        .catch( error => console.log( error ))
+    } , [] )
+
+    const { bonanza , partner , canonAlt , canonSrc } = headerDatos.headerLogo
+
+
+    return (
+        <>
+        <div className="Header">
+
+            <div className="Header-logo">
+            
+                <>
+                <div className="Bonanza">
+                    <h1 className="Bonanza-h1">{bonanza}</h1>
+                </div>
+                <div className="Canon">
+                    <h2 className="Partner">{partner}</h2>
+                    <img src={canonSrc} alt={canonAlt} className="Canon-img" />
+                </div>
+                </>
+                
+            </div>
+
+            <nav className="Header-nav">
+                <ul className="HeaderNav-ul">
+                    {headerDatos.headerNav.map (eachLi =>
+                        <HeaderNav key={eachLi.id} {...eachLi} /> 
+                    )}
+                </ul>
+            </nav>
+
+
+        </div>
+        </>
+    )
+}
+
+
+const HeaderNav = (props) => {
+
+    const {href , title} = props
+
+    return(
+        <>
+            <li className="HeaderNav-li">
+                <a href={href} className="HeaderNav-a">{title}</a>
+            </li>
+        </>
+    )
+}

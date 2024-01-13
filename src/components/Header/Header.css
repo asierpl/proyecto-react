@@ -1,0 +1,46 @@
+.Header{
+
+}
+.Header-logo{
+    position: relative;
+
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+
+    background-color: aqua;
+}
+.Bonanza{
+    background-color: rgb(167, 167, 230);
+}
+.Bonanza-h1{
+
+}
+.Partner{
+
+}
+
+.Canon{
+    background-color: rgb(236, 94, 94);
+}
+.Canon-img{
+    background-color: brown;
+}
+
+.Header-nav{
+
+}
+.HeaderNav-ul{
+    position: relative;
+
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+
+}
+.HeaderNav-li{
+
+}
+.HeaderNav-a{
+
+}

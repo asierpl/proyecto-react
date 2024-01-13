@@ -1,5 +1,8 @@
 import { useNavigate } from 'react-router-dom'
 import { useEffect } from "react"
+import { Header } from '../components/Header/Header'
+import { Carrousel } from '../components/Carrousel/Carrousel'
+
 
 
 export const Gestor = () => {
@@ -17,7 +20,8 @@ export const Gestor = () => {
 
     return (
         <>
-            <h2>Gestor</h2>
+           <Header/>
+           <Carrousel/>
         </>
     )
 }

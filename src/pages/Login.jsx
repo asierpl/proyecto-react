@@ -8,7 +8,7 @@ export const Login = () => {
 
     const navigate = useNavigate()
     const user = useRef('')
-    const pass   = useRef('')
+    const pass = useRef('')
 
     useEffect(()=>{
 
