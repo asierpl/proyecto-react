@@ -2,7 +2,6 @@
 
 import { useNavigate } from 'react-router-dom'
 import { useEffect} from "react"
-import './Login.css'
 import { Acceso} from '../components/Login/Login'
 
 export const Login = () => {
