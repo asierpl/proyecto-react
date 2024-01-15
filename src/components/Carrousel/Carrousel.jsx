@@ -1,8 +1,6 @@
 import { useEffect, useState } from 'react'
 import './Carrousel.css'
-// import { proyectoFinal } from '../../bbdd'
-// const { carrousel } = proyectoFinal
-// const {} = carrousel
+
 
 const { VITE_URL_API } = import.meta.env
 
