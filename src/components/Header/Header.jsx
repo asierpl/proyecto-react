@@ -17,8 +17,7 @@ export const Header = () => {
     } , [] )
 
     const { bonanza , partner , canonAlt , canonSrc } = datos.headerLogo
-
-
+    
     return (
         <>
         <div className="Header">
