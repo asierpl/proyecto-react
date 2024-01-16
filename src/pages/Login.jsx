@@ -2,7 +2,7 @@
 
 import { useNavigate } from 'react-router-dom'
 import { useEffect} from "react"
-import { Acceso} from '../components/Login/Login'
+import { Form } from '../components/Login/Form'
 
 export const Login = () => {
 
@@ -19,12 +19,9 @@ export const Login = () => {
     } , [])
 
     
-
-    
-    
     return (
         <> 
-       <Acceso/>
+       <Form/>
         </>
     )
 }

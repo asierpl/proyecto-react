@@ -1,9 +1,9 @@
 
 import { useEffect, useRef, useState } from "react"
-import './Login.css'
+import './Form.css'
 import { useNavigate } from "react-router-dom"
 
-export const Acceso = () => {
+export const Form = () => {
 
 const login = [
     {id: 0 , btn : "Iniciar sesion"},
@@ -11,13 +11,13 @@ const login = [
 ]
 
     const { VITE_URL_API } = import.meta.env
-
+    
     const navigate = useNavigate()
 
     const [ active , setActive ] = useState('')
     const loginHandler = (valor) => setActive(valor)
-   
-    
+
+    const [ loginData , setLoginData ] = useState({login : {} , iniciar : {} , crear : {}})
     
     const user = useRef('')
     const pass = useRef('')
@@ -53,50 +53,62 @@ const login = [
         .catch( error => console.log( error ))
     }
 
+    useEffect (()=> {
+        fetch(`${VITE_URL_API}`)
+        .then( res => res.json() )
+        .then( data => {console.log("Data:" , data), setLoginData (data)})  
+        .catch( error => console.log( error )) 
+    } , [] )
     
-    
+    const { srcCanon  , altCanon  , srcPort  , altPort } = loginData.login[0] || {}
+    const {htmlUserI  , labelUserI  , typeUserI  , nameUserI  , placeholderUserI  , htmlPassI  , labelPassI , typePassI , namePassI , placeholderPassI  , typeI  , valueI } = loginData.iniciar[0] || {}
+    const {htmlUserC  , labelUserC  , typeUserC  , nameUserC  , placeholderUserC  , htmlEmailC , labelEmailC , typeEmailC , nameEmailC , placeholderEmailC  , htmlPassC  , labelPassC  , typePassC  , namePassC  , placeholderPassC  , typeC  , valueC  } = loginData.crear[0] || {}
     return (
         <> 
         <div className="Container-login">
 
-            <img src="/assets/canon.png" alt="imagen" className="Canon-portada" />
+            <img src={srcCanon} alt={altCanon} className="Canon-portada" />
 
-            <img className='Img-portada' src="/assets/equipo.png" alt="imagen" />
+            <img className='Img-portada' src={srcPort} alt={altPort} />
 
             <div className="Open-login">
 
-               { login.map( eachBtn => 
+               { login.map( eachBtn  => 
                <OpenLogin 
                key={eachBtn.id}
                {...eachBtn}
-               loginHandler = {loginHandler}/>
-            )}
+               loginHandler = {loginHandler}
                
-                
+               />
+            )} 
             </div>
+
+
+            
+
                 {(active === login[0].btn ) && (
             <div  className={`Login ${ active ? 'isActive' : '' } `}>
             <button 
                 className="Close-btn"
                 onClick={()=>loginHandler('')}>
-                    <svg xmlns="http://www.w3.org/2000/svg"  fill="currentColor" class="bi bi-x-circle-fill" viewBox="0 0 16 16">
+                    <svg xmlns="http://www.w3.org/2000/svg"  fill="currentColor" className="bi bi-x-circle-fill" viewBox="0 0 16 16">
                         <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0M5.354 4.646a.5.5 0 1 0-.708.708L7.293 8l-2.647 2.646a.5.5 0 0 0 .708.708L8 8.707l2.646 2.647a.5.5 0 0 0 .708-.708L8.707 8l2.647-2.646a.5.5 0 0 0-.708-.708L8 7.293z"/>
                     </svg>
             </button>
-            <img className="Imagen-canon" src="/assets/canon.png" alt="imagen" />
+            <img className="Imagen-canon" src={srcCanon} alt={altCanon} />
 
                 <form onSubmit={ formHandler }>
                     
                     <div className="Caja-login">
-                        <label htmlFor="user">Nombre de usuario</label>
+                        <label htmlFor={htmlUserI}>{labelUserI}</label>
                     </div>
-                        <input type="text"  className='Placeholder'  name="user" ref={user} placeholder="Ingresa tu nombre de usuario"/>
+                        <input type={typeUserI}  className='Placeholder'  name={nameUserI} ref={user} placeholder={placeholderUserI}/>
                     <div className="Caja-login">
-                        <label htmlFor="pass">Contraseña</label>
+                        <label htmlFor={htmlPassI}>{labelPassI}</label>
                     </div>
-                        <input type="password" className='Placeholder' name="pass" ref={pass} placeholder="Ingresa tu contraseña"/>
+                        <input type={typePassI} className='Placeholder' name={namePassI} ref={pass} placeholder={placeholderPassI}/>
                     <div className="Caja-continuar">
-                        <input type="submit"   value="Acceder" />
+                        <input type={typeI}   value={valueI} />
                     </div>
                     
                 </form>
@@ -109,27 +121,29 @@ const login = [
             <button 
                 className="Close-btn"
                 onClick={()=>loginHandler('')}>
-                    <svg xmlns="http://www.w3.org/2000/svg"  fill="currentColor" class="bi bi-x-circle-fill" viewBox="0 0 16 16">
+                    <svg xmlns="http://www.w3.org/2000/svg"  fill="currentColor" className="bi bi-x-circle-fill" viewBox="0 0 16 16">
                         <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0M5.354 4.646a.5.5 0 1 0-.708.708L7.293 8l-2.647 2.646a.5.5 0 0 0 .708.708L8 8.707l2.646 2.647a.5.5 0 0 0 .708-.708L8.707 8l2.647-2.646a.5.5 0 0 0-.708-.708L8 7.293z"/>
                     </svg>
             </button>
-            <img className="Imagen-canon" src="/assets/canon.png" alt="imagen" />
+            <img className="Imagen-canon" src={srcCanon} alt={altCanon} />
+
+
             <form>
                 
                 <div className="Caja-iniciar">
-                    <label htmlFor="user">Nombre de usuario</label>
+                    <label htmlFor={htmlUserC}>{labelUserC}</label>
                 </div>
-                    <input type="text"  className='Placeholder'   name="user"  placeholder="Ingresa un nombre de usuario"/>
+                    <input type={typeUserC}  className='Placeholder'   name={nameUserC}  placeholder={placeholderUserC}/>
                 <div className="Caja-iniciar">
-                    <label htmlFor="email">Correo electronico</label>
+                    <label htmlFor={htmlEmailC}>{labelEmailC}</label>
                 </div>
-                    <input type="email"  className='Placeholder'  name="email" placeholder="Ingresa tu correo electronico o email"/>
+                    <input type={typeEmailC}  className='Placeholder'  name={nameEmailC} placeholder={placeholderEmailC}/>
                 <div className="Caja-iniciar">
-                    <label htmlFor="pass">Contraseña</label>
+                    <label htmlFor={htmlPassC}>{labelPassC}</label>
                 </div>
-                    <input type="password" className='Placeholder' name="pass"  placeholder="Ingresa una contraseña"/>
+                    <input type={typePassC} className='Placeholder' name={namePassC}  placeholder={placeholderPassC}/>
                 <div className="Caja-continuar">
-                    <input type="submit"   value="Continuar" />
+                    <input type={typeC}   value={valueC} />
                 </div>
             </form>
                 </div>
