@@ -59,7 +59,7 @@ const HeaderNav = (props) => {
     return(
         <>
             <li className="HeaderNav-li">
-                <NavLink to={href} className="HeaderNav-a">{title}</NavLink>
+                <NavLink to='/productos' className="HeaderNav-a">{title}</NavLink>
             </li>
         </>
     )
