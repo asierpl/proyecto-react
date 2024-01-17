@@ -12,9 +12,12 @@
 }
 .Bonanza{
     background-color: rgb(163, 163, 245);
+    min-width: 10rem;
+    max-width: 17rem;
+    
 }
-.Bonanza-h1{
-
+.Img-bonanza{
+   
 }
 .Partner{
 
@@ -22,13 +25,16 @@
 
 .Canon{
     background-color: rgb(236, 222, 94);
+    
 }
 .Canon-img{
     background-color: rgb(219, 80, 80);
+    
 }
 
 .Header-nav{
-
+margin: 2rem 0 2rem 0;
+background-color: aqua;
 }
 .HeaderNav-ul{
     position: relative;
