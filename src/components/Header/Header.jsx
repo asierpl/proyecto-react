@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react'
 import './Header.css'
+import { Link } from 'react-router-dom'
 
 const { VITE_URL_API } = import.meta.env
 
@@ -56,12 +57,13 @@ export const Header = () => {
 
 const HeaderNav = (props) => {
 
-    const {href , title} = props
+    const { title} = props
 
     return(
         <>
             <li className="HeaderNav-li">
-                <a href={href} className="HeaderNav-a">{title}</a>
+                {/* <a href='https://proyecto-react-teal.vercel.app/productos' className="HeaderNav-a">{title}</a> */}
+                <Link to='/productos' className="HeaderNav-a">{title}</Link>
             </li>
         </>
     )
