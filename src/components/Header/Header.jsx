@@ -26,8 +26,6 @@ export const Header = () => {
             <div className="Header-logo">
             
                 <>
-
-                
                 <div className="Bonanza">
                     <img src={bonanza} alt="Imagen" className="Img-bonanza" />
                     {/* <h1 className="Bonanza-h1">{bonanza}</h1> */}
@@ -53,7 +51,6 @@ export const Header = () => {
         </>
     )
 }
-
 
 const HeaderNav = (props) => {
 
