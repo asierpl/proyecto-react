@@ -1,5 +1,6 @@
 import { useNavigate } from 'react-router-dom'
 import { useEffect } from "react"
+import { Header } from '../components/Header/Header'
 
 export const Contacto = () => {
 
@@ -16,7 +17,7 @@ export const Contacto = () => {
 
     return (
         <>
-           <h1>hola</h1>
+          <Header/>
         </>
     )
 }

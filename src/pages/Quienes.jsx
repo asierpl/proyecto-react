@@ -1,5 +1,7 @@
 import { useNavigate } from 'react-router-dom'
-import { useEffect } from "react"
+import { useEffect} from "react"
+import { Header } from '../components/Header/Header'
+import { QuienesSomos } from '../components/Quienes/Quienes'
 
 export const Quienes = () => {
 
@@ -12,11 +14,11 @@ export const Quienes = () => {
         }
     } , [])
 
-
-
     return (
         <>
-           <h1>hola</h1>
+           <Header/>
+           <QuienesSomos/>
         </>
     )
 }
+

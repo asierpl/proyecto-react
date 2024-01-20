@@ -26,10 +26,9 @@ export const Header = () => {
                 <>
                 <div className="Bonanza">
                     <img src={bonanza} alt="Imagen" className="Img-bonanza" />
-                    {/* <h1 className="Bonanza-h1">{bonanza}</h1> */}
                 </div>
                 <div className="Canon">
-                    <h2 className="Partner">{partner}</h2>
+                    <h1 className="Partner">{partner}</h1>
                     <img src={canonSrc} alt={canonAlt} className="Canon-img" />
                 </div>
                 </>

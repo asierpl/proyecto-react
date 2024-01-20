@@ -16,11 +16,16 @@ const login = [
 
     const [ active , setActive ] = useState('')
     const loginHandler = (valor) => setActive(valor)
+    
 
     const [ loginData , setLoginData ] = useState({login : {} , iniciar : {} , crear : {}})
     
     const user = useRef('')
     const pass = useRef('')
+
+    
+//-----No se que hacia esto aqui, puede que no sirva
+    const formAddRef = useRef ()
 
     
 
@@ -53,6 +58,8 @@ const login = [
         .catch( error => console.log( error ))
     }
 
+   
+
     useEffect (()=> {
         fetch(`${VITE_URL_API}`)
         .then( res => res.json() )
@@ -82,9 +89,6 @@ const login = [
                />
             )} 
             </div>
-
-
-            
 
                 {(active === login[0].btn ) && (
             <div  className={`Login ${ active ? 'isActive' : '' } `}>

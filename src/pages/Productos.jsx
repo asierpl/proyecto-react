@@ -1,5 +1,7 @@
 import { useNavigate } from 'react-router-dom'
 import { useEffect } from "react"
+import { Header } from '../components/Header/Header'
+
 
 export const Productos = () => {
 
@@ -16,7 +18,7 @@ export const Productos = () => {
 
     return (
         <>
-           <h1>hola</h1>
+            <Header/>
         </>
     )
 }
