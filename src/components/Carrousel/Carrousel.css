@@ -9,10 +9,10 @@ y la mayoria estan vacíos*/
     
     position: relative;
     overflow: hidden;
-    background-color: rgb(159, 89, 224);
+    /* background-color: rgb(159, 89, 224); */
 }
 .Carrousel-container{
-    background-color: rgb(228, 96, 96);
+    /* background-color: rgb(228, 96, 96); */
     min-height: 70vh;
     transition: all .5s ease;
     display: grid;
@@ -21,14 +21,14 @@ y la mayoria estan vacíos*/
 .Photos{
     min-height: 30rem;
     max-height: 32rem;
-    background-color: blue;
+    /* background-color: blue; */
     
 }
 
 .Boton-right{
     width: 4rem;
     height: 4rem;
-    background-color: yellow;
+    background-color: rgb(102, 102, 86);
     position: absolute;
     top: calc( 50% - 2rem );
     right: 0;
@@ -37,7 +37,7 @@ y la mayoria estan vacíos*/
 .Boton-left{
     width: 4rem;
     height: 4rem;
-    background-color: yellow;
+    background-color: rgb(102, 102, 86);
     position: absolute;
     top: calc( 50% - 2rem );
     left: 0;

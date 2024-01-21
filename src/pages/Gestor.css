@@ -19,7 +19,7 @@ y la mayoria estan vacíos*/
     
 }
 .Solicitudes-lista{
-    background-color: aqua;
+    /* background-color: aqua; */
     position: relative;
     flex-flow: row nowrap;
     
@@ -28,7 +28,7 @@ y la mayoria estan vacíos*/
 }
 
 .Container {
-    background-color: rgb(175, 88, 255);
+    /* background-color: rgb(175, 88, 255); */
     position: relative;
     display: flex;
     flex-flow: row nowrap;
@@ -40,7 +40,7 @@ y la mayoria estan vacíos*/
 }
 
 .Container-solicitud{
-    background-color: rgb(250, 176, 176);
+    /* background-color: rgb(250, 176, 176); */
     width: 25rem;
     border: 0.2rem solid rgb(0, 0, 0);
     padding: .5rem;
@@ -49,7 +49,7 @@ y la mayoria estan vacíos*/
     
 }
 .Container-comment{
-    background-color: rgb(252, 239, 128);
+    /* background-color: rgb(252, 239, 128); */
     width: 25rem;
     border: 0.2rem solid rgb(0, 0, 0);
     padding: .5rem;
@@ -61,7 +61,7 @@ y la mayoria estan vacíos*/
 
 .Put-delete{
     
-    background-color: rgb(163, 163, 167);
+    /* background-color: rgb(163, 163, 167); */
     position: relative;
     display: flex;
     flex-flow: column wrap;
@@ -77,26 +77,26 @@ y la mayoria estan vacíos*/
 
 .Btn-update{
     padding: .3rem;
-    background-color: rgb(64, 93, 255);
+    /* background-color: rgb(64, 93, 255); */
     border-radius: 50%;
 }
 .Btn-delete{
     padding: .3rem;
-    background-color: rgb(235, 47, 47);
+    /* background-color: rgb(235, 47, 47); */
     border-radius: 50%;
 }
 
 
 .Añadir-h2{
-    background-color: rgb(201, 201, 255);
+    /* background-color: rgb(201, 201, 255); */
 }
 .Añadir-container{
-    background-color: aquamarine;
+    /* background-color: aquamarine; */
 }
 .Actualizar-h2{
-    background-color: rgb(201, 201, 255);
+    /* background-color: rgb(201, 201, 255); */
 }
 
 .Actualizar-container{
-    background-color: aquamarine;
+    /* background-color: aquamarine; */
 }

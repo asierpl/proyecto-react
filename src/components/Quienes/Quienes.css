@@ -7,7 +7,7 @@ y la mayoria estan vacíos*/
 
 }
 .Quienes-somos{
-background-color: rgb(241, 206, 50);
+/* background-color: rgb(241, 206, 50); */
 
 }
 .Quienes-h2{
@@ -24,7 +24,7 @@ background-color: rgb(241, 206, 50);
 }
 .Personal{
     width: 100%;
-    background-color: rgb(227, 197, 255);
+    /* background-color: rgb(227, 197, 255); */
    
     overflow-y: auto;
 }

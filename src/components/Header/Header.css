@@ -13,10 +13,10 @@ y la mayoria estan vacíos*/
     flex-flow: row nowrap;
     justify-content: space-between;
 
-    background-color: rgb(0, 150, 0);
+    /* background-color: rgb(0, 150, 0); */
 }
 .Bonanza{
-    background-color: rgb(163, 163, 245);
+    /* background-color: rgb(163, 163, 245); */
     min-width: 10rem;
     max-width: 17rem;
     
@@ -29,18 +29,18 @@ y la mayoria estan vacíos*/
 }
 
 .Canon{
-    background-color: rgb(236, 222, 94);
+    /* background-color: rgb(236, 222, 94); */
     
     
 }
 .Canon-img{
-    background-color: rgb(219, 80, 80);
+    /* background-color: rgb(219, 80, 80); */
     
 }
 
 .Header-nav{
 margin: 2rem 0 2rem 0;
-background-color: aqua;
+/* background-color: aqua; */
 }
 .HeaderNav-ul{
     position: relative;
