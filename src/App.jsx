@@ -1,5 +1,12 @@
+//Este archivo contiene el componente principal de la aplicación
+//Utiliza React Router para gestionar las rutas
+//Utiliza los componentes de las diferentes páginas de la aplicación
+
+//Importaciones necesarias de React Router y estilos CSS
 import {BrowserRouter , Routes , Route} from 'react-router-dom'
 import './App.css'
+
+//Importaciones de los componentes de las páginas.
 import { Login } from './pages/Login'
 import { Gestor } from './pages/Gestor'
 import { Productos } from './pages/Productos'
@@ -8,13 +15,15 @@ import { Reparacion } from './pages/Reparacion'
 import { Quienes } from './pages/Quienes'
 import { Contacto } from './pages/Contacto'
 
+//Componente principal de la aplicación
 function App() {
  
-
+  //Retorna el contenido del componente
   return (
     <BrowserRouter>
     <>
       <Routes>
+        {/* Rutas de la app con sus respectivos componentes */}
         <Route path='/'              element={ <Login/>  }/>
         <Route path='/gestor'        element={ <Gestor/> }/>
         <Route path='/productos'     element={ <Productos/> }/>
@@ -28,4 +37,5 @@ function App() {
   )
 }
 
+//Exporta el componente principal de la app
 export default App
