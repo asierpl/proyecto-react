@@ -22,8 +22,7 @@ export const Carrousel = () => {
     useEffect( () => {
         fetch( `${VITE_URL_API}/gestor` )
         .then( res => res.json() ) 
-        .then( data => { console.log("Data" , data) ,
-         setDatos(data)} )
+        .then( data => setDatos(data) )
         .catch( error => console.log(error) )
     }, [] )
 
@@ -51,7 +50,10 @@ export const Carrousel = () => {
     return(
         <>
         {/* Estructura del carrousel */}
-        <div className="Carrousel">
+
+       { datos.carrousel &&
+       
+       <div className="Carrousel">
             <div className="Carrousel-container"
 
                 // Estilos inline para adaptar el carrousel a cualquier número de fotos
@@ -78,6 +80,8 @@ export const Carrousel = () => {
                 </svg>
             </button>
         </div>
+
+        }
         
         </>
     )
@@ -95,3 +99,4 @@ const Photos = (props) => {
         </>
     )
 }
+

@@ -1,0 +1,15 @@
+
+.Botones-toner{
+    
+    background-color: aquamarine;
+}
+.Toner-update{
+    background-color: rgb(71, 223, 122);
+    cursor: pointer;
+    margin: 1rem;
+}
+.Toner-delete{
+    background-color: rgb(255, 153, 0);
+    cursor: pointer;
+    margin: 1rem;
+}

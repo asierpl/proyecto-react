@@ -1,4 +1,4 @@
-//Este archivo representa la página de alquiler en la app de React
+//Este archivo representa la página de mantenimiento en la app de React
 
 //Importa el hook useNavigate de react-router-dom para la navegación
 import { useNavigate } from 'react-router-dom'
@@ -8,9 +8,10 @@ import { useEffect } from "react"
 
 //Importa el componente 'Header' desde el directorio '../components/Header/Header'
 import { Header } from '../components/Header/Header'
+import { Toner } from '../components/Toner/Toner'
 
-//Exporta y define el componente 'Alquiler'
-export const Alquiler = () => {
+//Exporta y define el componente 'Mantenimiento'
+export const Mantenimiento = () => {
 
     //Utiliza useNavigate para la navegación
     const navigate = useNavigate()
@@ -30,6 +31,7 @@ export const Alquiler = () => {
         <>
         {/* Renderiza el componente 'Header' para mostrar la cabecera común a los demás endpoints*/}
            <Header/>
+           <Toner/>
         </>
     )
 }

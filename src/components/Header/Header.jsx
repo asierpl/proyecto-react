@@ -22,7 +22,7 @@ export const Header = () => {
     useEffect (()=> {
         fetch(`${VITE_URL_API}/gestor`)
         .then( res => res.json() )
-        .then( data => {console.log("Data:" , data), setDatos(data)})  
+        .then( data => setDatos(data))  
         .catch( error => console.log( error ))
     } , [] )
 

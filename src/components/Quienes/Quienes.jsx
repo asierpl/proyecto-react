@@ -12,6 +12,7 @@ const { VITE_URL_API } = import.meta.env
 //Exorta y define el componente 'QuienesSomos'
 export const QuienesSomos = () => {
 
+    
     //Hook useState para gestionar el estado de quienes
     const [ quienes , setQuienes ] = useState({ quienesTexto : {} , quienesValores : [] , personalFotos : [] })
 
@@ -19,14 +20,13 @@ export const QuienesSomos = () => {
     useEffect (()=> {
         fetch(`${VITE_URL_API}/quienes-somos`)
         .then( res => res.json() )
-        .then( data => {console.log("Data:" , data), 
-        //actualiza el estado de 'quienes' con los datos obtenidos
-            setQuienes(data)})  
+        .then( data => setQuienes(data)) 
         .catch( error => console.log( error ))
     } , [] )
 
     //Extrae las propiedades específicas de 'quienesTexto' y se deconstruyen
     const { quienesH , quienesP , valoresH , valoresP , srcEquipo , altEquipo } = quienes.quienesTexto[0] || {}
+    
     
 
     //Retorna el contenido del componente
@@ -83,6 +83,7 @@ const QuienesValores = (props) => {
 
     //Deconstruimos mediante props
     const {valor} = props
+    
     return(
         <>
         {/* Muestra un valor del personal de la lista */}

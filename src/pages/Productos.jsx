@@ -8,6 +8,7 @@ import { useEffect } from "react"
 
 //Importa el componente 'Header' desde el directorio '../components/Header/Header'
 import { Header } from '../components/Header/Header'
+import { Products } from '../components/Products/Products'
 
 //Exporta y define el componente 'Productos'
 export const Productos = () => {
@@ -30,6 +31,14 @@ export const Productos = () => {
         <>
         {/* Renderiza el componente 'Header' para mostrar la cabecera común a los demás endpoints*/}
            <Header/>
+        {/* Renderiza el componente 'Products' para mostrarlo*/}
+           <Products/>
         </>
     )
 }
+
+
+
+
+
+
