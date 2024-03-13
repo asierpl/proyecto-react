@@ -22,7 +22,7 @@ export const Contacta = () => {
     } , [] )
  
     
-    const {contacta , esperamos , calle , ciudad , telefono , numero , correo , emailCanon , emailBonanza } = contact.contacto[0] || {}
+    const {contacta , esperamos , calle , ciudad , telefono , numero , correo , emailCanon , emailBonanza } = contact.contacto
 
     return(
         <>

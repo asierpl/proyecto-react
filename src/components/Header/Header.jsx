@@ -27,7 +27,7 @@ export const Header = () => {
     } , [] )
 
     //Extrae las propiedades específicas de 'headerLogo' y se deconstruyen
-    const { bonanza , partner , canonAlt , canonSrc } = datos.headerLogo     //DUDA: ¿Por que aqui no necesito '[0] || {}' para que se vea y en los otros archivos si?
+    const { bonanza , partner , canonAlt , canonSrc } = datos.headerLogo     
     
     //Retorna el contenido del componente
     return (

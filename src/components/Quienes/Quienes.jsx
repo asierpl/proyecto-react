@@ -25,7 +25,7 @@ export const QuienesSomos = () => {
     } , [] )
 
     //Extrae las propiedades específicas de 'quienesTexto' y se deconstruyen
-    const { quienesH , quienesP , valoresH , valoresP , srcEquipo , altEquipo } = quienes.quienesTexto[0] || {}
+    const { quienesH , quienesP , valoresH , valoresP , srcEquipo , altEquipo } = quienes.quienesTexto
     
     
 

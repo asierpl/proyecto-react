@@ -77,9 +77,9 @@ export const Form = () => {
     } , [] )
     
     //Deconstrucción de propiedades presentes en la interfaz del login.
-    const { srcCanon  , altCanon  , srcPort  , altPort } = loginData.login[0] || {}
-    const { htmlUserI  , labelUserI  , typeUserI  , nameUserI  , placeholderUserI  , htmlPassI  , labelPassI , typePassI , namePassI , placeholderPassI  , typeI  , valueI } = loginData.iniciar[0] || {}
-    const { htmlUserC  , labelUserC  , typeUserC  , nameUserC  , placeholderUserC  , htmlEmailC , labelEmailC , typeEmailC , nameEmailC , placeholderEmailC  , htmlPassC  , labelPassC  , typePassC  , namePassC  , placeholderPassC  , typeC  , valueC  } = loginData.crear[0] || {}
+    const { srcCanon  , altCanon  , srcPort  , altPort } = loginData.login
+    const { htmlUserI  , labelUserI  , typeUserI  , nameUserI  , placeholderUserI  , htmlPassI  , labelPassI , typePassI , namePassI , placeholderPassI  , typeI  , valueI } = loginData.iniciar
+    const { htmlUserC  , labelUserC  , typeUserC  , nameUserC  , placeholderUserC  , htmlEmailC , labelEmailC , typeEmailC , nameEmailC , placeholderEmailC  , htmlPassC  , labelPassC  , typePassC  , namePassC  , placeholderPassC  , typeC  , valueC  } = loginData.crear
     
     //Retorna el contenido del componente
     return (
