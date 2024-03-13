@@ -11,6 +11,7 @@ import { Header } from '../components/Header/Header'
 
 //Importa el componente 'Header' desde el directorio '../components/Quienes/Quienes'
 import { QuienesSomos } from '../components/Quienes/Quienes'
+import { Footer } from '../components/Footer/Footer'
 
 //Exporta y define el componente 'Quienes'
 export const Quienes = () => {
@@ -35,6 +36,7 @@ export const Quienes = () => {
            <Header/>
            {/* Renderiza el componente 'Header' la información particular de este endpoint*/}
            <QuienesSomos/>
+           <Footer/>
         </>
     )
 }

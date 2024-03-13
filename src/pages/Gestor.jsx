@@ -4,6 +4,7 @@ import { Header } from '../components/Header/Header'
 import { Carrousel } from '../components/Carrousel/Carrousel'
 import './Gestor.css'
 import { Inicio } from '../components/Inicio/Inicio'
+import { Footer } from '../components/Footer/Footer'
 
 export const Gestor = () => {
 
@@ -21,6 +22,7 @@ export const Gestor = () => {
         <Header/>
         <Carrousel/>
         <Inicio/>
+        <Footer/>
         </>
     )
 }

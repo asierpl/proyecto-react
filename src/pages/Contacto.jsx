@@ -9,6 +9,7 @@ import { useEffect } from "react"
 //Importa el componente 'Header' desde el directorio '../components/Header/Header'
 import { Header } from '../components/Header/Header'
 import { Contacta } from '../components/Contacta/Contacta'
+import { Footer } from '../components/Footer/Footer'
 
 //Exporta y define el componente 'Contacto'
 export const Contacto = () => {
@@ -31,6 +32,7 @@ export const Contacto = () => {
         {/* Renderiza el componente 'Header' para mostrar la cabecera común a los demás endpoints*/}
             <Header/>
             <Contacta/>
+            <Footer/>
         </>
     )
 }

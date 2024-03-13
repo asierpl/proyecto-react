@@ -1,1 +1,70 @@
-/* Sin hacer nada todavía */
+.Footer{
+    width: 100%;
+
+    background-color: rgb(148, 255, 139);
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+.Footer-div{
+    background-color: lightcoral;
+    width: 31%;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: flex-start;
+    align-items: flex;
+    text-align: start;
+}
+.Footer-h4{
+
+}
+.Footer-h5{
+
+}
+.Footer-p{
+
+}
+
+.Info-div{
+    background-color: lightcoral;
+    width: 31%;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: flex-start;
+    align-items: flex;
+    text-align: start;
+}
+.Info-h4{
+
+}
+.Info-ul{
+
+}
+.FooterNav-li{
+
+}
+.FooterNav-a{
+
+}
+
+
+.Oficina-div{
+    background-color: lightcoral;
+    width: 31%;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: flex-start;
+    align-items: flex;
+    text-align: start;
+   
+}
+.Oficina-ul{
+
+}
+.Oficina-li{
+
+}
+.Oficina-p{
+
+}
