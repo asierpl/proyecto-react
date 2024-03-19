@@ -3,55 +3,60 @@ Ningún archivo CSS con código escrito es definitivo
 y la mayoria estan vacíos*/
 
 .Container-login{
-    background-color: white;
-    width: 100vw;
+    background-color: rgb(255, 255, 255);
+
+    
+
+    width: 100%;
+    min-height: 15vh;
+    margin: auto;
+    /* width: 100vw;
     height: 100vh;
     position: fixed;
     top: 0;
     left: 0;
-    
     overflow: hidden;
-    
+     */
+
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    align-items: center;
     
     
 }
 
 .Canon-portada{
-    position: absolute;
     
-    /* background-color: blue; */
-    width: 20%;
+    
+    background-color: rgb(145, 145, 245);
+    width: 15rem;
+    margin: 2rem;
+    
 }
 
-.Img-portada{
-    width: 50vw;
+
+.Bonanza-portada{
+    background-color: rgb(187, 255, 0);
+    width: 15rem;
+    margin: 2rem;
     
-    object-fit: cover;
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    margin: auto;
-    
-    
-    z-index: -1;
-    
+
 }
 
 .Imagen-canon{
     width: 10rem;
     margin: auto;
     margin-bottom: 3rem;
+    
 }
 .Open-login{
     position: relative;
     display: flex;
     gap: 0.5rem;
-    width: 15%;
-    margin: 1.2rem;
+    width: 15rem;
+    margin: 2rem;
    
-    margin-left: auto;
     
     
     
@@ -68,6 +73,37 @@ y la mayoria estan vacíos*/
     
 }
 
+.Portada-container{
+    background: url("/assets/canonoficina.png") no-repeat center center / cover;
+    width: 100%;
+    min-height: 85vh;
+   
+}
+
+.Img-portada{
+    
+    
+    /* top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    z-index: -1;
+    
+     background-color: lightgreen;
+     margin: auto;
+     width: 100%;
+     object-fit: cover;
+     width: 50vw;
+    
+     top: 0;
+     left: 0;
+     right: 0;
+     bottom: 0;
+     margin: auto;
+     z-index: -1;
+      */
+}
 
 .Login, .Crear{
     background-color: white;
@@ -79,15 +115,19 @@ y la mayoria estan vacíos*/
     
     opacity: 0;
     pointer-events: none;
-    margin: auto;
+    
     border: 0.2rem solid rgb(182, 30, 30);
 
-    position: relative;
-    z-index: 1;
+    position: fixed;
+    
+    top: 50%;
+    left: 50%;
+    transform: translate(-50% , -50%);
     
     
     
 }
+
 .Login.isActive{
     opacity: 1;
     pointer-events: auto;

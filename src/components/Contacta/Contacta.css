@@ -1,8 +1,17 @@
+.Contacto{
+    width: 80%;
+    margin: auto;
+}
+
 .Contacta-h1{
     /* background-color: rgb(127, 127, 212); */
+
+    
 }
 .Contacta-section{
     background-color: rgb(109, 231, 156);
+
+    
 }
 .Calle-h2{
     background-color: rgb(134, 134, 196);

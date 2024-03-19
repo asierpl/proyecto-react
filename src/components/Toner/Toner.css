@@ -1,4 +1,36 @@
+.Mantenimiento{
+    width: 80%;
+    margin: auto;
+}
 
+.SolicitudToner-h2{
+
+}
+.SolicitudToner-container{
+
+}
+.Solicitud-comentario{
+    width: 80%;
+    margin: auto;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    align-items: center;
+
+}
+.SolicitudToner-ul{
+    width: 80%;
+    margin: auto;
+    background-color: aqua;
+}
+.SolicitudToner-li{
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    align-items: center;
+    text-align: start;
+
+}
 .Botones-toner{
     
     background-color: aquamarine;
@@ -12,4 +44,48 @@
     background-color: rgb(255, 153, 0);
     cursor: pointer;
     margin: 1rem;
+}
+
+
+.Add-container{
+    background-color: lightsalmon;
+    margin: auto;
+    width: 50%;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 1rem;
+   
+
+}
+.AddToner-h2{
+
+}
+.AddToner-div{
+
+}
+.AddToner-form{
+
+}
+
+.Editar-container{
+    background-color: rgb(118, 243, 113);
+    margin: auto;
+    width: 50%;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 1rem;
+   
+}
+.EditarToner-h2{
+
+}
+.EditarToner-div{
+
+}
+.EditarToner-form{
+
 }

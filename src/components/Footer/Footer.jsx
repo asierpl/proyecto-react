@@ -27,25 +27,28 @@ export const Footer = () => {
         <>
         
         <footer className="Footer">
-            <div className="Footer-div">
-                <h4 className="Footer-h4">{bonanzaPie}</h4>
-                <h5 className="Footer-h5">{silverPie}</h5>
-                <p className="Footer-p">{pPie}</p>
-            </div>
-            <div className="Info-div">
-                <h4 className="Info-h4">{infoPie}</h4>
-            <ul className="Info-ul">
-                    {pie.headerNav.map (eachLi =>
-                        <FooterNav key={eachLi.id} {...eachLi} /> 
-                    )}
-                </ul>
-            </div>
-            <div className="Oficina-div">
-                <ul className="Oficina-ul">
-                        {pie.footerOficina.map( oficina => 
-                        <Oficina key={oficina.id}{...oficina} />
-                    )}
-                </ul>
+            <div className="Footer-container">
+                <div className="Footer-div">
+                    <img src="/assets/logobonanza.jpg" alt="Logo Bonanza" className="Footer-img" />
+                    {/* <h4 className="Footer-h4">{bonanzaPie}</h4> */}
+                    <h5 className="Footer-h5">{silverPie}</h5>
+                    <p className="Footer-p">{pPie}</p>
+                </div>
+                <div className="Info-div">
+                    <h4 className="Info-h4">{infoPie}</h4>
+                <ul className="Info-ul">
+                        {pie.headerNav.map (eachLi =>
+                            <FooterNav key={eachLi.id} {...eachLi} /> 
+                        )}
+                    </ul>
+                </div>
+                <div className="Oficina-div">
+                    <ul className="Oficina-ul">
+                            {pie.footerOficina.map( oficina => 
+                            <Oficina key={oficina.id}{...oficina} />
+                        )}
+                    </ul>
+                </div>
             </div>
         </footer>
         </>

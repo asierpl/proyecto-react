@@ -4,7 +4,8 @@ y la mayoria estan vacíos*/
 
 
 .Carrousel{
-    width: 100%;
+    width: 80%;
+    margin: auto;
     /* max-width: 37.5rem; */
     
     position: relative;

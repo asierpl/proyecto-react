@@ -1,15 +1,40 @@
 .Productos{
-    
+    width: 80%;
+    margin: auto;
 }
 .Productos-ul{
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: space-between;
+   
 
 }
 .Impresoras-li{
-    background-color: rgb(157, 240, 240);
-    margin: 2rem;
+    /* background-color: rgb(157, 240, 240); */
+    margin: 2rem 0;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    align-items: center;
+    
+    
+}
+.Impresoras-texto{
+    /* background-color: rgb(255, 123, 123); */
+    width: 50%;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    padding: 2rem;
+    
+
+   
 }
 .Impresoras-h2{
-
+    font-size: 1.5em;
+    color: rgb(153, 0, 0);
 }
 .Impresoras-p{
 
@@ -18,5 +43,28 @@
 
 }
 .Impresoras-img{
+    /* background-color: rgb(255, 169, 169); */
+    width: 50%;
+    
+}
 
+
+.Impresoras-li:nth-child(even) .Impresoras-texto{
+    order: 2
+}
+.Impresoras-li:nth-child(odd) .Impresoras-img{
+    order: 1
+}
+
+@media screen and ( max-width : 768px ){ 
+    .Impresoras-li{
+        flex-flow: column nowrap;
+    }
+    .Impresoras-img, .Impresoras-texto{
+        width: 100%;
+    }
+
+    .Impresoras-li, .Impresoras-texto{
+        order: 2;
+    }
 }

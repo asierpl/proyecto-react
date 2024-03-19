@@ -24,6 +24,7 @@ export const Inicio = () => {
     return(
         <>
         <section className="Inicio">
+       
             <h2 className="Inicio-h2">{inicio}</h2>
             <h3 className="Inicio-h3">{subInicio}</h3>
             <div className="Inicio-div">
@@ -48,18 +49,20 @@ export const Inicio = () => {
 
 
 const Ofrecemos = (props) => {
-    const {srcOffer , altOffer , offer , offerP} = props
+    const {xlmns, viewBox , d , offer , offerP} = props
 
     return(
         <>
         <li className="Ofrecemos-li">
-            <img src={srcOffer} alt={altOffer} className="Ofrecemos-img" />
+            <svg xmlns={xlmns}  viewBox={viewBox} className="Ofrecemos-img"><path d={d} /></svg>
             <h4 className="Ofrecemos-h4">{offer}</h4>
             <p className="Ofrecemos-p">{offerP}</p>
         </li>
         </>
     )
 }
+
+
 
 
 

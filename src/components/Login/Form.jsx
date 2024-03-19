@@ -89,7 +89,8 @@ export const Form = () => {
 
             {/* Imagenes de la portada */}
             <img src={srcCanon} alt={altCanon} className="Canon-portada" />
-            <img className='Img-portada' src={srcPort} alt={altPort} />
+            
+            <img src="/assets/logobonanza.jpg" alt="Bonanza" className='Bonanza-portada' />
 
             {/* Botones de inicio de sesión y creación de cuenta */}
             <div className="Open-login">
@@ -192,6 +193,9 @@ export const Form = () => {
                 </div>
              )}
 
+        </div>
+        <div className="Portada-container">
+            <img className='Img-portada' src="/assets/canonoficina.png" alt={altPort} />
         </div>
         </>
     )

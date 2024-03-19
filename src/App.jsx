@@ -11,7 +11,6 @@ import { Login } from './pages/Login'
 import { Gestor } from './pages/Gestor'
 import { Productos } from './pages/Productos'
 import { Mantenimiento } from './pages/Mantenimiento'
-import { Reparacion } from './pages/Reparacion'
 import { Quienes } from './pages/Quienes'
 import { Contacto } from './pages/Contacto'
 
@@ -28,7 +27,6 @@ function App() {
         <Route path='/gestor'        element={ <Gestor/> }/>
         <Route path='/productos'     element={ <Productos/> }/>
         <Route path='/mantenimiento' element={ <Mantenimiento/> }/>
-        <Route path='/reparacion'    element={ <Reparacion/> }/>
         <Route path='/quienes-somos' element={ <Quienes/> }/>
         <Route path='/contacto'      element={ <Contacto/> }/>
       </Routes>

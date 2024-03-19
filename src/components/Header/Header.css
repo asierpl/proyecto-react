@@ -1,24 +1,24 @@
-/* Sin comentarios porque realizaré muchos cambios. 
-Ningún archivo CSS con código escrito es definitivo 
-y la mayoria estan vacíos*/
-
-
 .Header{
+    width: 80%;
+    margin: auto;
+   
     
 }
 .Header-logo{
     position: relative;
-
+    /* background-color: rgb(241, 129, 0); */
     display: flex;
     flex-flow: row nowrap;
     justify-content: space-between;
+    margin-top: 2rem;
 
-    /* background-color: rgb(0, 150, 0); */
+    
 }
 .Bonanza{
     /* background-color: rgb(163, 163, 245); */
-    min-width: 10rem;
+    width: 40%;
     max-width: 17rem;
+   
     
 }
 .Img-bonanza{
@@ -30,7 +30,8 @@ y la mayoria estan vacíos*/
 
 .Canon{
     /* background-color: rgb(236, 222, 94); */
-    
+    width: 40%;
+    max-width: 15rem;
     
 }
 .Canon-img{
@@ -39,20 +40,76 @@ y la mayoria estan vacíos*/
 }
 
 .Header-nav{
-margin: 2rem 0 2rem 0;
-/* background-color: aqua; */
+    margin: 2rem 0;
+    /* background-color: rgb(101, 255, 87); */
 }
+
+
 .HeaderNav-ul{
     position: relative;
 
     display: flex;
     flex-flow: row nowrap;
     justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+    
 
 }
 .HeaderNav-li{
-
+    
 }
 .HeaderNav-a{
 
+}
+.Menu-btn{
+    display: none;
+    cursor: pointer;
+    width: 3rem;
+    background-color: aqua;
+    padding: 0rem;
+}
+
+
+@media (max-width: 800px){
+    
+    .Menu-btn{
+        display: flex;
+    }
+    
+    .Header-nav{
+       
+
+       
+        height: 0vh;
+        overflow: hidden;
+        opacity: 0;
+        transition: all .5s ease;
+        
+    }
+   
+    .Header-nav.isVisible{
+       height: 50vh;
+       opacity: 1;
+       background-color: black;
+       color: aliceblue;
+       padding: 1rem;
+
+       
+       
+    }
+   
+    .HeaderNav-ul{
+        
+        
+        display: flex;
+        flex-flow: column nowrap;
+        justify-content: space-evenly;
+        align-items:center;
+        /* background-color: aqua; */
+        height: 100%;
+        
+       
+    }
+    
 }

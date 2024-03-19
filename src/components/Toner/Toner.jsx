@@ -134,23 +134,28 @@ export const Toner = () => {
     return(
 
         <>
-        <h2>Mantenimiento</h2>
-        <h2 className="SolicitudToner-h2">Tus solicitudes pendientes de tóner</h2>
-        <div className="SolicitudToner-container">
-            <ul className="SolicitudToner-ul">
-                {datos.toner === 0
-                
-                    ? <li>Nada</li>
-
-                    : (datos.toner && datos.toner.map( eachToner => 
-                        <ListaToner key={eachToner.id}{...eachToner}
-                        deleteTonerHandler={deleteTonerHandler}
-                        updateTonerHandler={updateTonerHandler}
-                        />
-                    ))
-                }
-            </ul>
+        <div className="Mantenimiento">
+        <div className="Solicitud-comentario">
+            <h2 className="Solicitud-h2">Solicitud</h2>
+            <h2 className="Comentarios-h2">Comentarios</h2>
+            <h2 className="Boton-h2">Boton</h2>
         </div>
+            <div className="SolicitudToner-container">
+                <ul className="SolicitudToner-ul">
+                    {datos.toner === 0
+                    
+                        ? <li>Nada</li>
+
+                        : (datos.toner && datos.toner.map( eachToner => 
+                            <ListaToner key={eachToner.id}{...eachToner}
+                            deleteTonerHandler={deleteTonerHandler}
+                            updateTonerHandler={updateTonerHandler}
+                            />
+                        ))
+                    }
+                </ul>
+            </div>
+        
         
         <AddToner 
         addTonerHandler = {addTonerHandler} 
@@ -165,7 +170,7 @@ export const Toner = () => {
 
 
         {/* <ActualizarToner/> */}
-
+        </div>
         </>
     )
 }
@@ -181,10 +186,11 @@ const ListaToner = (props) => {
         <>
         <li className="SolicitudToner-li">
             <div className="ColorToner-div">
-                <h3 className="ColorToner-h3">{color}</h3>
                 
+                <h3 className="ColorToner-h3">{color}</h3>
             </div>
             <div className="ComentarioToner-div">
+                
                 <h3 className="ComentarioToner-h3">{comentario}</h3>
                 
             </div>
@@ -203,13 +209,15 @@ const ListaToner = (props) => {
 
     return(
         <>
-        <h2 className="AddToner-h2">Editar</h2>
+        <div className="Add-container">
+        <h2 className="AddToner-h2">Añadir</h2>
         <div className="AddToner-div">
             <form onSubmit={addTonerHandler}  className="AddToner-form">
                 <input type="text" ref={colorRef} id='color' placeholder='¿Qué necesita?' />
                 <input type="text" ref={comentarioRef} id='comentario' placeholder='Añade un comentario' />
                 <input type="submit" value='Añadir' />
             </form>
+        </div>
         </div>
         </>
     )
@@ -220,8 +228,8 @@ const EditarToner = (props) => {
 
     const { editarFormTonerHandler , updateRef} = props
     return(
-    <>
-    <h2 className="EditarToner-h2">Añadir</h2>
+    <><div className="Editar-container">
+    <h2 className="EditarToner-h2">Editar</h2>
         <div className="EditarToner-div">
             <form onSubmit={editarFormTonerHandler} ref={updateRef} className="EditarToner-form">
                 <input type="text" id='updateId' placeholder='id'/>
@@ -229,6 +237,7 @@ const EditarToner = (props) => {
                 <input type="text" id='updateComentario' placeholder='Añade un comentario' />
                 <input type="submit" value='Editar' />
             </form>
+        </div>
         </div>
     </>
     )

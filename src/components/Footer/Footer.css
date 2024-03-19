@@ -1,48 +1,86 @@
 .Footer{
     width: 100%;
+    border-radius: 0px;
+    background: #4f4f4f;
+    box-shadow:  9px 9px 37px #202020,
+                 -9px -9px 37px #7e7e7e;
+}
 
-    background-color: rgb(148, 255, 139);
+.Footer-container{
+    width: 80%;
+    
+    margin: auto;
+
+    /* background-color: rgb(148, 255, 139); */
     display: flex;
     flex-flow: row nowrap;
     justify-content: space-between;
     align-items: flex-start;
+    padding: 2rem;
+    color: rgb(218, 218, 218);
+
+   
+   
+    
+    
 }
 .Footer-div{
-    background-color: lightcoral;
-    width: 31%;
+    background-color: rgb(71, 71, 71);
+    width: 32%;
     display: flex;
     flex-flow: column nowrap;
     justify-content: flex-start;
     align-items: flex;
     text-align: start;
-}
-.Footer-h4{
+    gap: 1rem;
 
+    border-radius: 20px;
+       padding: 1rem;
+}
+.Footer-img{
+    width: 100%;
+   
 }
 .Footer-h5{
-
+    font-size: 1.5em;
 }
 .Footer-p{
 
 }
 
 .Info-div{
-    background-color: lightcoral;
-    width: 31%;
+    background-color: rgb(71, 71, 71);
+    width: 32%;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: flex-start;
+    align-items: center;
+    text-align: start;
+
+    border-radius: 20px;
+    padding: 1rem;
+}
+.Info-h4{
+    margin-bottom: 1rem;
+    font-size: 1.5rem;
+}
+.Info-ul{
     display: flex;
     flex-flow: column nowrap;
     justify-content: flex-start;
     align-items: flex;
-    text-align: start;
-}
-.Info-h4{
+    
+    gap: .5rem;
 
-}
-.Info-ul{
+    
 
 }
 .FooterNav-li{
+    font-size: 1rem;
 
+    list-style: disc;
+    margin-left: 1rem;
+    
 }
 .FooterNav-a{
 
@@ -50,21 +88,63 @@
 
 
 .Oficina-div{
-    background-color: lightcoral;
-    width: 31%;
+    background-color: rgb(71, 71, 71);
+    width: 32%;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: flex-start;
+    align-items: center;
+    text-align: start;
+
+    border-radius: 30px;
+       padding: 1rem;
+   
+}
+.Oficina-ul{
     display: flex;
     flex-flow: column nowrap;
     justify-content: flex-start;
     align-items: flex;
     text-align: start;
-   
-}
-.Oficina-ul{
-
+    gap: 1rem;
 }
 .Oficina-li{
 
 }
 .Oficina-p{
 
+}
+
+@media (max-width : 768px){
+
+    .Footer-container{
+        
+        width: 100%;
+        /* background-color: rgb(148, 255, 139); */
+
+
+        display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+    
+        /* display: grid;
+        grid-template-rows: repeat(auto-fit , minmax(250px , 1fr));
+        gap: 3rem;
+        margin: auto; */
+
+        
+       
+       
+    }    
+
+    .Footer-div, .Oficina-div, .Info-div{
+       width: 50%;
+       margin: 2rem ;
+       
+    }
+
+    .Footer-div{
+        
+    }
 }

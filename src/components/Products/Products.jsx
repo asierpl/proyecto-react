@@ -34,10 +34,14 @@ const Impresoras = (props) => {
     return(
         <>
             <li className="Impresoras-li">
-                <h2 className="Impresoras-h2">{h2}</h2>
-                <p className="Impresoras-p">{p}</p>
-                <a href={href} title={precio} className="Impresoras-a">{precio}</a>
-                <img src={src} alt={alt} className="Impresoras-img" />
+                <div className="Impresoras-texto">
+                    <h2 className="Impresoras-h2">{h2}</h2>
+                    <p className="Impresoras-p">{p}</p>
+                    <a href={href} title={precio} className="Impresoras-a">{precio}</a>
+                </div>
+               
+                    <img src={src} alt={alt} className="Impresoras-img" />
+                
             </li>
         </>
     )

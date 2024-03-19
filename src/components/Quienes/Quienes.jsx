@@ -27,7 +27,8 @@ export const QuienesSomos = () => {
     //Extrae las propiedades específicas de 'quienesTexto' y se deconstruyen
     const { quienesH , quienesP , valoresH , valoresP , srcEquipo , altEquipo } = quienes.quienesTexto
     
-    
+    const[ lightbox , setLightbox] = useState('')
+    const lightboxHandler = (valor) => setLightbox(valor)
 
     //Retorna el contenido del componente
     return (
@@ -44,19 +45,32 @@ export const QuienesSomos = () => {
                     <ul className="Personal-ul">
                     {/* Método .map para mostrar la lista de fotos */}
                     {quienes.personalFotos.map(persona => 
-                        <QuienesImagenes key={persona.id} {...persona} />)}
+                        <QuienesImagenes key={persona.id} {...persona} lightboxHandler={lightboxHandler}/>)}
                     </ul>
                 </div>
+
+                <div className={`Lightbox ${lightbox ? 'isVisible' : ''}`}>
+                    <button className="Lightbox-btn"
+                        onClick={() => lightboxHandler('')}>
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="bi bi-x-lg" viewBox="0 0 16 16">
+                            <path d="M2.146 2.854a.5.5 0 1 1 .708-.708L8 7.293l5.146-5.147a.5.5 0 0 1 .708.708L8.707 8l5.147 5.146a.5.5 0 0 1-.708.708L8 8.707l-5.146 5.147a.5.5 0 0 1-.708-.708L7.293 8z"/>
+                        </svg>
+                    </button>
+                    <img src={lightbox} alt="Imagen grande" className="Lightbox-img" />
+                </div>      
+
                 {/* Parte de la sección sobre los valores de la empresa */}
-                <div className="Valores-div">
+                <div className="Valores">
                     <img src={srcEquipo} alt={altEquipo} className="Equipo-img" />
-                    <h3 className="Valores-h3">{valoresH}</h3>
-                    <p className="Valores-p">{valoresP}</p>
-                    <ul className="Valores-ul">
-                        {/* Método .map para mostrar la lista de valores */}
-                        {quienes.quienesValores.map(valor => 
-                        <QuienesValores key={valor.id} {...valor} />)}
-                    </ul>
+                    <div className="Valores-div">
+                        <h3 className="Valores-h3">{valoresH}</h3>
+                        <p className="Valores-p">{valoresP}</p>
+                        <ul className="Valores-ul">
+                            {/* Método .map para mostrar la lista de valores */}
+                            {quienes.quienesValores.map(valor => 
+                            <QuienesValores key={valor.id} {...valor}  />)}
+                        </ul>
+                    </div>
                 </div>
            </section>
         </>
@@ -67,12 +81,14 @@ export const QuienesSomos = () => {
 const QuienesImagenes = (props) => {
 
     //Deconstruimos mediante props
-    const {src , alt} = props
+    const {src , alt , lightboxHandler} = props
     return(
         <>
         {/* Muestra una imagen del personal de la lista */}
         <li className="Personal-li">
-            <img src={src} alt={alt} className="Personal-img" />
+            <img onClick={() => lightboxHandler(src)} 
+            src = {src} alt = {alt}  loading = 'lazy'
+            className="Personal-img" />
         </li>
         </>
     )
@@ -83,12 +99,15 @@ const QuienesValores = (props) => {
 
     //Deconstruimos mediante props
     const {valor} = props
+    const tick = valor.split('')
     
     return(
         <>
         {/* Muestra un valor del personal de la lista */}
         <li className="Valores-li">
-            <p className="Valor-p">{valor}</p>
+            <p className="Valor-p">
+                <span className="tick">{tick[0]}</span>{tick.slice(1).join('')}
+            </p>
         </li>
         </>
     )

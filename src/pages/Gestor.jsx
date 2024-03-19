@@ -2,7 +2,7 @@ import { useNavigate } from 'react-router-dom'
 import { useEffect} from "react"
 import { Header } from '../components/Header/Header'
 import { Carrousel } from '../components/Carrousel/Carrousel'
-import './Gestor.css'
+
 import { Inicio } from '../components/Inicio/Inicio'
 import { Footer } from '../components/Footer/Footer'
 
