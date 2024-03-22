@@ -13,12 +13,21 @@ export const Contacta = () => {
 
     //Hook useEffect para realizar acciones al cargar el componente
     useEffect (()=> {
-        fetch(`${VITE_URL_API}/contacto`)
+
+        let controller = new AbortController()
+
+        let options = {
+            method : 'get',
+            signal : controller.signal
+        }
+
+        fetch(`${VITE_URL_API}/contacto` , options)
         .then( res => res.json() )
         .then( data =>  
         //actualiza el estado de 'contacto' con los datos obtenidos
             setContact(data))  
         .catch( error => console.log( error ))
+        .finally( ()=> controller.abort())
     } , [] )
  
     

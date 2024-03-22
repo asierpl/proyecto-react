@@ -1,20 +1,40 @@
 .Contacto{
     width: 80%;
     margin: auto;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    margin-top: 3rem;
+
+
 }
 
 .Contacta-h1{
-    /* background-color: rgb(127, 127, 212); */
+    color: rgb(175, 6, 6);
+    font-size: 2.5em;
+    font-weight:600;
+    
 
     
 }
 .Contacta-section{
-    background-color: rgb(109, 231, 156);
+    /* background-color: rgb(109, 231, 156); */
+    
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 3rem;
+
 
     
 }
 .Calle-h2{
-    background-color: rgb(134, 134, 196);
+    /* background-color: rgb(134, 134, 196); */
+    font-size: 1.5em;
 }
 .Calle-p{
     /* background-color: blue; */

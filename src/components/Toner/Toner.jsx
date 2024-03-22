@@ -1,8 +1,10 @@
-import { useEffect, useRef, useState } from 'react'
+import { createContext, useContext, useEffect, useRef, useState } from 'react'
 import './Toner.css'
 
 //Recoge la variable de entorno 'VITE_URL_API' del entorno de importación
 const { VITE_URL_API } = import.meta.env
+
+const TonerContext  = createContext()
 
 export const Toner = () => {
 
@@ -19,10 +21,18 @@ export const Toner = () => {
     
 
     useEffect( () => {
-        fetch( `${VITE_URL_API}/mantenimiento` )
+
+        let controller = new AbortController()
+       
+        let options = {
+            method  : 'get' , 
+            signal : controller.signal,
+        }
+        fetch( `${VITE_URL_API}/mantenimiento` , options )
         .then( res => res.json() )
         .then( data => {console.log(data) , setDatos(data)})
         .catch( error => console.log(error))
+        .finally( () => controller.abort())
     } , [])
 
  
@@ -133,12 +143,13 @@ export const Toner = () => {
 
     return(
 
+        <TonerContext.Provider value={{ deleteTonerHandler , updateTonerHandler , addTonerHandler , colorRef , comentarioRef , updateRef , editarFormTonerHandler}}>
         <>
         <div className="Mantenimiento">
         <div className="Solicitud-comentario">
             <h2 className="Solicitud-h2">Solicitud</h2>
             <h2 className="Comentarios-h2">Comentarios</h2>
-            <h2 className="Boton-h2">Boton</h2>
+            <h2 className="Boton-h2"></h2>
         </div>
             <div className="SolicitudToner-container">
                 <ul className="SolicitudToner-ul">
@@ -147,38 +158,28 @@ export const Toner = () => {
                         ? <li>Nada</li>
 
                         : (datos.toner && datos.toner.map( eachToner => 
-                            <ListaToner key={eachToner.id}{...eachToner}
-                            deleteTonerHandler={deleteTonerHandler}
-                            updateTonerHandler={updateTonerHandler}
-                            />
+                            <ListaToner key={eachToner.id} {...eachToner}/>
                         ))
                     }
                 </ul>
             </div>
         
         
-        <AddToner 
-        addTonerHandler = {addTonerHandler} 
-         
-        colorRef        = {colorRef}
-        comentarioRef   = {comentarioRef}
-         />
+        <AddToner/>
 
-        <EditarToner 
-        editarFormTonerHandler={editarFormTonerHandler}
-        updateRef={updateRef} />
+        <EditarToner/>
 
-
-        {/* <ActualizarToner/> */}
         </div>
         </>
+        </TonerContext.Provider>
     )
 }
 
 
 
 const ListaToner = (props) => {
-    const {color , comentario , deleteTonerHandler , _id , updateTonerHandler} = props
+    const {color , comentario ,  _id  } = props
+    const {deleteTonerHandler , updateTonerHandler} = useContext(TonerContext)
     
     
 
@@ -203,9 +204,9 @@ const ListaToner = (props) => {
     )
 }
 
- const AddToner = (props) => {
+ const AddToner = () => {
 
-    const { addTonerHandler , colorRef , comentarioRef} = props
+    const { addTonerHandler , colorRef , comentarioRef } = useContext(TonerContext)
 
     return(
         <>
@@ -223,10 +224,11 @@ const ListaToner = (props) => {
     )
 }
 
+const EditarToner = () => {
 
-const EditarToner = (props) => {
+    
+    const { editarFormTonerHandler , updateRef } = useContext(TonerContext)
 
-    const { editarFormTonerHandler , updateRef} = props
     return(
     <><div className="Editar-container">
     <h2 className="EditarToner-h2">Editar</h2>

@@ -20,10 +20,20 @@ export const Carrousel = () => {
 
     //Obtiene los datos del carrousel desde la API al cargar el componente
     useEffect( () => {
-        fetch( `${VITE_URL_API}/gestor` )
+
+        let controller = new AbortController()
+
+        let options = {
+            method : 'get',
+            signal : controller.signal
+        }
+
+        fetch( `${VITE_URL_API}/gestor` , options )
         .then( res => res.json() ) 
         .then( data => setDatos(data) )
         .catch( error => console.log(error) )
+        .finally( ()=> controller.abort() )
+
     }, [] )
 
     //Función para gestionar el desplazamiento hacia la derecha del carrousel
@@ -93,9 +103,7 @@ const Photos = (props) => {
 
     return(
         <>
-        <img src={src} 
-        alt={alt} 
-        className={`Photos`} />
+        <img src={src} alt={alt} className={`Photos`} loading="lazy" />
         </>
     )
 }

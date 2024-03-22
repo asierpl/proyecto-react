@@ -1,14 +1,23 @@
+
 .Mantenimiento{
     width: 80%;
     margin: auto;
 }
 
-.SolicitudToner-h2{
-
+.Solicitud-h2, .ColorToner-div {
+    width: 35%;
 }
-.SolicitudToner-container{
 
+
+.Comentarios-h2, .ComentarioToner-div{
+    background-color: aqua;
+    width: 45%;
 }
+
+.Boton-h2 , .Botones-toner{
+    width: 20%;
+}
+
 .Solicitud-comentario{
     width: 80%;
     margin: auto;
@@ -16,19 +25,23 @@
     flex-flow: row nowrap;
     justify-content: space-between;
     align-items: center;
+    
 
 }
 .SolicitudToner-ul{
     width: 80%;
     margin: auto;
-    background-color: aqua;
+    
 }
 .SolicitudToner-li{
+    background-color: rgb(255, 182, 182);
     display: flex;
     flex-flow: row nowrap;
     justify-content: space-between;
     align-items: center;
     text-align: start;
+    
+    
 
 }
 .Botones-toner{

@@ -10,10 +10,18 @@ export const Products = () => {
 
 
     useEffect( () => {
-        fetch( `${VITE_URL_API}/productos` )
+
+        let controller = new AbortController()
+       
+        let options = {
+            method  : 'get' , 
+            signal : controller.signal,
+        }
+        fetch( `${VITE_URL_API}/productos` ,options )
         .then( res => res.json() )
         .then( data => {console.log(data) , setDatos(data)})
         .catch( error => console.log(error))
+        .finally( () => controller.abort())
     } , [])
 
     return(
@@ -40,7 +48,7 @@ const Impresoras = (props) => {
                     <a href={href} title={precio} className="Impresoras-a">{precio}</a>
                 </div>
                
-                    <img src={src} alt={alt} className="Impresoras-img" />
+                    <img src={src} alt={alt} className="Impresoras-img" loading="lazy"/>
                 
             </li>
         </>

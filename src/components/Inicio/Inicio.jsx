@@ -11,12 +11,21 @@ export const Inicio = () => {
 
      //Hook useEffect para realizar acciones al cargar el componente
      useEffect (()=> {
-        fetch(`${VITE_URL_API}/gestor`)
+
+        let controller = new AbortController()
+
+        let options = {
+            method : 'get',
+            signal : controller.signal
+        }
+
+        fetch(`${VITE_URL_API}/gestor` , options)
         .then( res => res.json() )
         .then( data =>  
         //actualiza el estado de 'inicio' con los datos obtenidos
         setInitial(data))  
         .catch( error => console.log( error ))
+        .finally( ()=> controller.abort())
     } , [] )
 
     const {inicio  , subInicio  , srcA  , srcB  , altInicio  , ofrecer  , ofrecerP  } = initial.inicio

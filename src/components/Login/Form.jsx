@@ -45,9 +45,11 @@ export const Form = () => {
             pass : pass.current.value,
         }
 
+        let controller = new AbortController()
         //Configura la solicitud de inicio de sesión
         let options = {
             method  : 'post' , 
+            signal : controller.signal,
             body    : JSON.stringify(nuevo),
             headers : {
                 "Content-type" : "application/json"
@@ -66,11 +68,20 @@ export const Form = () => {
             }
         })
         .catch( error => console.log( error ))
+        .finally(()=> controller.abort())
     }
 
    //Obtiene los datos iniciales del servidor al cargar el componente
     useEffect (()=> {
-        fetch(`${VITE_URL_API}`)
+        
+        let controller = new AbortController()
+       
+        let options = {
+            method  : 'get' , 
+            signal : controller.signal,
+        }
+        
+        fetch(`${VITE_URL_API}` , options)
         .then( res => res.json() )
         .then( data => {console.log("Data:" , data), setLoginData (data)})  
         .catch( error => console.log( error )) 

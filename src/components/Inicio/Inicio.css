@@ -1,14 +1,15 @@
 .Inicio{
     width: 80%;
     margin: auto;
-    background-color: lightblue;
+    /* background-color: #fecacc; */
+    text-align: center;
     
 
 }
 .Inicio-h2{
     min-height: 5vh;
     font-family: 'Times New Roman', Times, serif;
-    color: rgb(175, 6, 6);
+    color: #ce2229;
     font-size: 3.5em;
     margin: 3rem 0 2rem 0;
     font-weight:600;
@@ -17,7 +18,7 @@
 .Inicio-h3{
     min-height: 5vh;
     font-family: 'Times New Roman', Times, serif;
-    color: rgb(175, 6, 6);
+    color: #ce2229;
     font-size: 2.5em;
     font-weight:600;
     margin: 3rem 0 5rem 0;
@@ -25,20 +26,21 @@
 }
 
 .Inicio-div{
-    width: 100%;
+    width: 80%;
+    margin: auto;
     
-    background-color: lightgray;
+   
 
     display: flex;
     flex-flow: row nowrap;
     justify-content: space-around;
-    align-items:center;
+   
     gap: 2rem;
 
 }
 .Inicio-img{
     background-color: rgb(194, 255, 204);
-    width: 35%;
+    width: 25%;
     min-height: 30vh;
 }
 .Ofrecer-h3{
@@ -47,12 +49,16 @@
     color: rgb(175, 6, 6);
     font-size: 2.5em;
     font-weight:600;
-    margin: 3rem 0 5rem 0;
+    margin: 3rem 0 3rem 0;
     line-height: 1;
 }
 .Offer-p{
+    width: 80%;
+    margin: auto;
     text-align: start;
     font-family: 'Times New Roman', Times, serif;
+    font-size: 1.2em;
+    margin-bottom: 5rem;
 }
 .Ofrecemos-div{
     min-height: 30vh;
@@ -61,15 +67,25 @@
     
 }
 .Ofrecemos-ul{
+    width: 80%;
+    margin: auto;
     display: flex;
     flex-flow: row nowrap;
     justify-content: space-around;
-    align-items:start;
+    align-items:flex-start;
+    text-align: center;
+    
     gap: 2rem;
 
 }
 .Ofrecemos-li{
-
+    width: 30%;
+    min-height: 30vh;
+    border-radius: 21px;
+    background: #fecacc;
+    box-shadow:  5px 5px 37px #989898,
+                 -5px -5px 37px #ffffff;
+    padding: 2rem;
 }
 .Ofrecemos-img{
     /* background-color: rgb(219, 219, 103); */
@@ -81,16 +97,32 @@
 }
 .Ofrecemos-h4{
     margin-top: 1rem;
-    background-color: lightgreen;
-    font-size: 2em;
+    /* background-color: lightgreen; */
+    font-size: 1.7em;
     font-family: 'Times New Roman', Times, serif;
     width: 100%;
     min-height: 5vh;
-    
+    color: rgb(175, 6, 6);
     line-height: 1;
 }
 .Ofrecemos-p{
     margin-top: 1rem;
     text-align: start;
     font-family: 'Times New Roman', Times, serif;
+    font-size: 1.2em;
+}
+
+
+@media (max-width : 960px){
+
+    .Ofrecemos-ul{
+        display: flex;
+        flex-flow: column nowrap;
+        justify-content: space-around;
+        align-items:center;
+        text-align: center;
+    }
+    .Ofrecemos-li{
+        width: 70%;
+    }
 }

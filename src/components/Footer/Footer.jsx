@@ -16,10 +16,19 @@ export const Footer = () => {
     const { bonanzaPie , silverPie  , pPie  , infoPie } = pie.footer
     //Obtiene los datos del footer desde la API al cargar el componente.
     useEffect (()=> {
-       fetch(`${VITE_URL_API}/gestor`)
-       .then( res => res.json() )
-       .then( data => setPie(data))  
-       .catch( error => console.log( error ))
+
+        let controller = new AbortController()
+
+        let options = {
+            method : 'get',
+            signal : controller.signal
+        }
+
+        fetch(`${VITE_URL_API}/gestor` , options)
+        .then( res => res.json() )
+        .then( data => setPie(data))  
+        .catch( error => console.log( error ))
+        .finally( ()=> controller.abort())
    } , [] )
    
 

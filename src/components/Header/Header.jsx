@@ -23,10 +23,18 @@ export const Header = () => {
 
     //Obtiene los datos del header desde la API al cargar el componente.
     useEffect (()=> {
-        fetch(`${VITE_URL_API}/gestor`)
+
+        let controller = new AbortController()
+
+        let options = {
+            method : 'get',
+            signal : controller.signal
+        }
+        fetch(`${VITE_URL_API}/gestor` , options)
         .then( res => res.json() )
         .then( data => setDatos(data))  
         .catch( error => console.log( error ))
+        .finally( ()=> controller.abort())
     } , [] )
 
     //Extrae las propiedades específicas de 'headerLogo' y se deconstruyen
@@ -36,6 +44,7 @@ export const Header = () => {
     return (
         <>
          {/* Estructura de la cabecera */}
+         <div className="Header-container">
         <div className="Header">
            
             <div className="Header-logo">
@@ -68,6 +77,7 @@ export const Header = () => {
             </button>
 
 
+        </div>
         </div>
         </>
     )

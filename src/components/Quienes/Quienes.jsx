@@ -18,10 +18,18 @@ export const QuienesSomos = () => {
 
     //Hook useEffect para realizar acciones al cargar el componente
     useEffect (()=> {
-        fetch(`${VITE_URL_API}/quienes-somos`)
+
+        let controller = new AbortController()
+       
+        let options = {
+            method  : 'get' , 
+            signal : controller.signal,
+        }
+        fetch(`${VITE_URL_API}/quienes-somos` , options)
         .then( res => res.json() )
         .then( data => setQuienes(data)) 
         .catch( error => console.log( error ))
+        .finally( () => controller.abort)
     } , [] )
 
     //Extrae las propiedades específicas de 'quienesTexto' y se deconstruyen
@@ -56,12 +64,12 @@ export const QuienesSomos = () => {
                             <path d="M2.146 2.854a.5.5 0 1 1 .708-.708L8 7.293l5.146-5.147a.5.5 0 0 1 .708.708L8.707 8l5.147 5.146a.5.5 0 0 1-.708.708L8 8.707l-5.146 5.147a.5.5 0 0 1-.708-.708L7.293 8z"/>
                         </svg>
                     </button>
-                    <img src={lightbox} alt="Imagen grande" className="Lightbox-img" />
+                    <img src={lightbox} alt="Imagen grande" className="Lightbox-img" loading="lazy" />
                 </div>      
 
                 {/* Parte de la sección sobre los valores de la empresa */}
                 <div className="Valores">
-                    <img src={srcEquipo} alt={altEquipo} className="Equipo-img" />
+                    <img src={srcEquipo} alt={altEquipo} className="Equipo-img" loading="lazy" />
                     <div className="Valores-div">
                         <h3 className="Valores-h3">{valoresH}</h3>
                         <p className="Valores-p">{valoresP}</p>
