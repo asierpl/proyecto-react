@@ -50,18 +50,12 @@ Footer.css
 
 /* Estilos para las imágenes del pie de página */
 .Footer-img{
-    width: 70%;
+    width: 80%;
 }
 
 /* Estilos para los encabezados del pie de página */
 .Footer-h5{
     font-size: 1.5em;
-}
-
-.Info-h4{
-    margin-bottom: 1rem;
-
-    font-size: 1.5rem;
 }
 
 /* Estilos para las listas de información */
@@ -73,6 +67,10 @@ Footer.css
     gap: .5rem;
 }
 
+.Info-ul{
+    gap: 1.2rem;
+}
+
 .Oficina-ul{
     gap: 1rem;
 
@@ -81,7 +79,7 @@ Footer.css
 
 /* Estilos para los elementos de navegación del pie de página */
 .FooterNav-li{
-    font-size: 1rem;
+    font-size: 1.2em;
 }
 
 .FooterNav-li:hover{

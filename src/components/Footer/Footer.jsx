@@ -19,7 +19,7 @@ export const Footer = () => {
     const [pie , setPie] = useState({ footer : {} , footerOficina : [] , footerNav : [] })
 
     //Deconstruye las propiedades del objeto 'pie.footer'.
-    const { silverPie , pPie  , infoPie } = pie.footer
+    const { silverPie , pPie } = pie.footer
 
     //Obtiene los datos del footer desde la API al cargar el componente.
     useEffect (()=> {
@@ -49,7 +49,6 @@ export const Footer = () => {
                     <p className="Footer-p">{pPie}</p>
                 </div>
                 <div className="Info-div">
-                    <h4 className="Info-h4">{infoPie}</h4>
                     <ul className="Info-ul">
                         {/* Mapea y renderiza los elementos de 'pie.footerNav' utilizando el componente 'FooterNav' */}
                         {pie.footerNav.map (eachLi =>
