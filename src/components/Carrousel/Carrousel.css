@@ -1,0 +1,56 @@
+/*--------------------------------------
+Carrousel.css
+
+-Carrousel de la sección de inicio.
+----------------------------------------*/
+
+/* Contenedor del carrousel */
+.Carrousel{
+    position: relative;
+
+    width: 100%;
+    margin: auto;
+
+    overflow: hidden;
+}
+
+/* Contenedor de las imágenes */
+.Carrousel-container{
+    display: grid;
+    grid-template-columns: repeat(auto-fit , minmax(300px , 1fr));
+    min-height: 70vh;
+
+    transition: all .5s ease;
+}
+
+/* Imágenes del carrousel */
+.Photos{
+    height: 70vh;
+
+    object-fit: cover;
+}
+
+/* Botón para desplazar a la derecha las imágenes */
+.Boton-right{
+    position: absolute;
+    top: calc( 50% - 2rem );
+    right: 0;
+
+    width: 3rem;
+    height: 3rem;
+
+    color: black;
+}
+/* Botón para desplazar a la izquierda las imágenes */
+.Boton-left{
+    position: absolute;
+    top: calc( 50% - 2rem );
+    left: 0;
+
+    width: 3rem;
+    height: 3rem;
+    
+    color: black;
+
+    z-index: 3;
+}

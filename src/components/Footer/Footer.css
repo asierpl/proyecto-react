@@ -1,0 +1,131 @@
+/*--------------------------------------
+Footer.css
+
+-Estilos para el pie de página de la aplicación
+----------------------------------------*/
+
+/* Estilos para el pie de página */
+.Footer{
+    width: 100%;
+
+    background: #4f4f4f;
+    border-radius: 0px;
+    box-shadow:  9px 9px 37px #202020,
+                 -9px -9px 37px #7e7e7e;
+}
+
+/* Estilos para el contenedor del pie de página */
+.Footer-container{
+    width: 80%;
+    margin: auto;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 2rem;
+
+    color: rgb(218, 218, 218);
+}
+
+/* Estilos para los elementos dentro del pie de página */
+.Footer-div, 
+.Info-div, 
+.Oficina-div{
+    width: 32%;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 1rem;
+    padding: 1.5rem;
+
+    text-align: start;
+
+    border-radius: 20px;
+}
+
+.Footer-div{
+    align-items: start;
+}
+
+/* Estilos para las imágenes del pie de página */
+.Footer-img{
+    width: 70%;
+}
+
+/* Estilos para los encabezados del pie de página */
+.Footer-h5{
+    font-size: 1.5em;
+}
+
+.Info-h4{
+    margin-bottom: 1rem;
+
+    font-size: 1.5rem;
+}
+
+/* Estilos para las listas de información */
+.Info-ul, .Oficina-ul{
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: flex-start;
+    align-items: flex;
+    gap: .5rem;
+}
+
+.Oficina-ul{
+    gap: 1rem;
+
+    text-align: start; 
+}
+
+/* Estilos para los elementos de navegación del pie de página */
+.FooterNav-li{
+    font-size: 1rem;
+}
+
+.FooterNav-li:hover{
+    text-decoration: underline;
+}
+
+/* Media query para pantallas de ancho menor a 960px */
+@media (max-width : 960px){
+
+    .Footer-container{
+        width: 90%;
+    }    
+
+    .Footer-div, .Oficina-div, .Info-div{
+        align-items: start;
+    }
+}
+
+/* Media query para pantallas de ancho menor a 768px */
+@media (max-width : 768px){
+
+    .Footer-container{
+        width: 100%;
+        display: flex;
+        flex-flow: column nowrap;
+        justify-content: center;
+        align-items: center;
+    }    
+
+    .Footer-div, .Oficina-div, .Info-div{
+       width: 50%;
+       margin: 2rem ;
+       
+       background-color: #414141;
+    }
+    .FooterNav-li{
+        z-index: 4;
+    }
+}
+
+/* Media query para pantallas de ancho menor a 480px */
+@media (max-width : 480px){
+
+    .Footer-div, .Oficina-div, .Info-div{
+        width: 70%; 
+    }
+}

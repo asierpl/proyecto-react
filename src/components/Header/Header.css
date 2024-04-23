@@ -1,0 +1,226 @@
+/*--------------------------------------
+
+Header.css
+
+- Estilos para el encabezado de la página, 
+que incluye el logo de la empresa, el logo de la marca, 
+el menú de navegación y la línea horizontal separadora.
+----------------------------------------*/
+
+/* Contenedor principal del encabezado */
+.Header-container{
+    width: 100%;
+
+    background-color: rgb(255, 255, 255);
+}
+
+/* Estilos para el contenido del encabezado */
+.Header{
+    width: 80%;
+    margin: auto;
+}
+
+/* Estilos para el logo y sus elementos */
+.Header-logo{
+    position: relative;
+
+    width: 100%;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    padding-top: 1.5rem;
+}
+
+/* Logo de la empresa */
+.Bonanza{
+    width: 30%;
+    max-width: 17rem;
+    margin-top: .5rem;
+}
+
+/* Logo de la marca */
+.Canon{
+    width: 35%;
+    max-width: 15rem;
+}
+
+/* Menú de navegación */
+.Header-nav{
+    padding: 2rem 0;
+}
+
+/* Estilos para el botón del menú desplegable */
+.Menu-btn{
+    display: none;
+    width: 4rem;
+    height: 4rem;
+    margin-top: .7rem;
+
+    cursor: pointer;
+}
+
+/* Estilos para el botón que cierra el menú desplegable */
+.Cerrar-menu{
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+
+    width: 2rem;
+
+    color: red;
+
+    cursor: pointer;
+}
+
+
+/* Estilos para la lista de navegación */
+.HeaderNav-ul{
+    position: relative;
+
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+    margin-top: 2rem;
+}
+
+/* Estilos para cada elemento de la lista de navegación */
+.HeaderNav-li{
+    font-family: Century Gothic, Arial, Helvetica, sans-serif;
+    font-weight: bolder;
+    font-size: 1.1em;
+
+    color: rgb(48, 48, 48);
+}
+
+/* Subrayado al pasar el mouse por cada palabra */
+.HeaderNav-li:hover{
+    text-decoration: underline;
+}
+
+/* Estilos para la línea horizontal separadora */
+.LineaH{
+    border: 1px solid rgb(119, 119, 119);
+}
+
+/* Media query para pantallas inferiores a 960px */
+@media (max-width: 960px){
+    
+    .Header{
+        margin-bottom: 1rem;
+    }
+    .Menu-btn{
+        display: flex;
+    }
+    
+    .Header-nav{
+        position: fixed;
+        left: 0;
+        top: 0;
+
+        height: 100vh;
+
+        opacity: 0;
+        transition: all 1s ease;
+        overflow: hidden;
+        z-index: 2;
+    }
+   
+    .Header-nav.isVisible{
+       position: absolute;
+
+       width: 50vw;
+       max-width: 20rem;
+       padding: 1rem;
+
+       background-color: black;
+
+       opacity: 1;
+    }
+   
+    .HeaderNav-ul{
+        display: flex;
+        flex-flow: column nowrap;
+        justify-content:space-between;
+        align-items: start;
+        margin: 3rem 0 0 1rem;
+        gap: 2rem;
+    }
+
+    .HeaderNav-li{
+        color: rgb(255, 255, 255);
+    }
+}
+
+/* Media query para pantallas inferiores a 768px */
+@media (max-width: 768px){
+
+    .Bonanza{
+        width: 35%;
+    }
+
+    .Menu-btn{
+        width: 2.5rem;
+    }
+
+    .Canon{
+        width: 33%;
+        max-width: 15rem;
+        margin-top: .5rem;
+    }
+}
+
+/* Media query para pantallas inferiores a 480px */
+@media (max-width: 480px){
+
+    .Bonanza{
+        width: 38%;
+    }
+
+    .Menu-btn{
+        width: 2.5rem;
+    }
+
+    .Canon{
+        width: 33%;
+        max-width: 15rem;
+        margin-top: .5rem;
+    }
+
+    .Header-nav.isVisible{
+        width: 80vw;
+    }
+
+    .LineaH{
+        margin-top: -1rem;
+    }
+}
+
+/* Media query para pantallas inferiores a 320px */
+@media (max-width: 320px){
+
+    .Bonanza{
+        width: 38%;
+
+    }
+
+    .Menu-btn{
+        width: 1.5rem;
+    }
+
+    .Canon{
+        
+        width: 33%;
+        max-width: 15rem;
+        margin-top: .5rem;
+    }
+
+    .Header-nav.isVisible{
+        width: 80vw;
+    }
+
+    .LineaH{
+        margin-top: -2rem;
+    }
+}

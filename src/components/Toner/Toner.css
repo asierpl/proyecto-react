@@ -1,0 +1,293 @@
+/*--------------------------------------
+Toner.css
+
+- Estilos para la sección de mantenimiento. 
+----------------------------------------*/
+
+/* Contenedor principal de la información introductoria */
+.Toner-info{
+    width: 50%;
+    margin: auto;
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    margin-top: 3rem;
+}
+
+/* Título principal */
+.Toner-h2{
+    font-family: Century Gothic, Arial, Helvetica, sans-serif;
+    font-size: 2em;
+    font-weight: bold;
+    line-height: 1;
+    
+    color: rgb(175, 6, 6);
+}
+
+/* Párrafo de texto introductorio */
+.Toner-p{
+    font-family: Century Gothic, Arial, Helvetica, sans-serif;
+    font-size: 1.2em;
+    line-height: 1;
+}
+
+/* Contenedor principal de mantenimiento */
+.Mantenimiento{
+    width: 70%;
+    margin: auto;
+    margin-top: 3rem;
+    margin-bottom: 3rem;
+}
+
+/* Contenedor de los formularios */
+.Formularios-div{
+    width: 100%;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Contenedores de añadir y editar tóner */
+.Add-container, .Editar-container{
+    width: 40%;
+    margin: auto;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: flex-start;
+    margin-bottom: 2rem;
+    padding: 1.5rem;
+    
+    border-radius: 5px;
+    background-color: white;
+    border-radius: 1rem;
+    border: 0.2rem solid rgb(182, 30, 30);
+}
+
+/* Títulos de añadir y editar tóner */
+.AddToner-h2, .EditarToner-h2{
+    font-size: 1.5rem;
+    font-weight: bolder;
+
+    color: rgb(182, 30, 30);
+}
+
+/* Contenedores de los campos de entrada */
+.AddToner-div, .EditarToner-div{
+    width: 100%;
+}
+
+/* Campos de entrada */
+.Input-solicitud , .Input-comentario{
+    width: 100%;
+    margin: 1rem 0;
+    padding: 0.5rem;
+
+    background-color: #e0e0e0;
+    border: 0.2rem solid rgb(182, 30, 30);
+}
+
+/* Botón de enviar */
+.Input-enviar{
+    width: 30%;
+    display: flex;
+    justify-content: center;
+    margin: 2rem 1rem 2rem 0rem;
+    padding: 0.5rem;
+
+    background-color: rgb(182, 30, 30);
+    border: 0.2rem solid rgb(182, 30, 30);
+    border-radius: 0.25rem;
+    color: white;
+
+    cursor: pointer;
+}
+
+/* Estilos para las solicitudes de tóner y comentarios */
+.Solicitud-h2, .ColorToner-div,.Comentarios-h2, .ComentarioToner-div {
+    width: 25%;
+    padding: 1rem;
+
+    background-color: #e0e0e0;
+    border: 1px solid rgb(145, 145, 145) ;
+    border-radius: 5px;
+}
+
+
+.Comentarios-h2, .ComentarioToner-div{
+    word-wrap: break-word;
+}
+
+/* Títulos de solicitud y comentarios */
+.Solicitud-h2, .Comentarios-h2{
+    font-size: 1.5rem;
+    
+    background-color: #b9b9b9;
+    border: 1px solid rgb(145, 145, 145) ;
+    border-radius: 5px;
+}
+
+/* Botones de solicitud de toner */
+.Boton-h2 , .Botones-toner{
+    width: 10%;
+}
+
+/* Contenedor de solicitud y comentario */
+.Solicitud-comentario{
+    width: 100%;
+    margin: auto;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    gap: 1rem;
+    align-items: center;
+    margin-bottom: .5rem;
+}
+
+/* Lista de solicitudes de tóner */
+.SolicitudToner-ul{
+    width: 100%;
+    margin: auto;
+}
+
+/* Cada elemento de la lista */
+.SolicitudToner-li{
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    gap: 1rem;
+    align-items: center;
+    margin-bottom: .5rem;
+
+    text-align: start;
+
+    border-radius: 5px;
+}
+
+/* Contenedor de los botones de editar y eliminar tóner */
+.Botones-toner{
+    display: flex;
+    justify-content: flex-start;
+    gap: .5rem
+}
+
+/* Estilos de los botones de editar y eliminar */
+.Toner-update , .Toner-delete{
+    padding: .5rem 1rem;
+
+    font-size: .8em;
+    
+    background-color: #2196f3;
+    color: white;
+    border: none;
+    border-radius: 3px;
+    
+    transition: background-color .5s ease;
+    cursor: pointer;
+}
+
+/* Botón eliminar */
+.Toner-delete{
+    background-color: #f44336;
+}
+
+/* Cambio de color al pasar mouse por botón editar */
+.Toner-update:hover{
+    background-color: #0d47a1;
+}
+/* Cambio de color al pasar mouse por botón eliminar */
+.Toner-delete:hover{
+    background-color: #8b0900
+}
+
+
+/* Media query para pantallas de ancho inferior a 960px */
+@media(max-width: 960px){
+
+    .Toner-info{
+        width: 80%;
+    }
+
+    .Toner-h2{
+        font-size: 1.7em;
+    }
+
+    .Toner-p{
+        font-size: 1em;
+    }
+
+    .Botones-toner{
+        display: flex;
+        flex-flow: column;
+        justify-content: center;
+        gap: .2rem;
+
+        font-size: 1em;
+    }
+
+    .Boton-h2 , .Botones-toner{
+        width: 15%;
+    }
+
+    .Mantenimiento{
+        width: 100%;
+    }
+
+    .Input-enviar{
+        width: 40%;
+    }
+
+    .AddToner-h2, .EditarToner-h2{
+        font-size: 1.4em;
+    }
+}
+
+/* Media query para pantallas de ancho inferior a 480px */
+@media(max-width: 480px){
+
+    .Toner-info{
+        width: 85%;
+    }
+
+    .Toner-h2{
+        font-size: 1.3em;
+        text-align: center;
+    }
+
+    .Toner-p{
+        font-size: .9em;
+    }
+
+    .Formularios-div{
+        width: 100%;
+        display: flex;
+        flex-flow: column nowrap;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .Add-container, .Editar-container{
+      width: 80%;
+    }
+
+    .Solicitud-h2, .Comentarios-h2{
+        font-size: 1em;
+        padding: .5rem;
+    }
+
+    .Toner-update , .Toner-delete{
+        font-size: .7em; 
+        padding: .3rem;
+    }
+
+    .ColorToner-div, .ComentarioToner-div{
+        font-size: .8em;
+    }
+
+    .AddToner-h2, .EditarToner-h2{
+        font-size: 1.3em;
+    }
+}

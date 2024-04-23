@@ -1,0 +1,149 @@
+/*--------------------------------------
+Products.css
+
+- Estilos para la sección de productos
+----------------------------------------*/
+
+/* Estilos para el contenedor principal de la sección de productos */
+.Productos{
+    width: 80%;
+    margin: auto;
+}
+
+/* Estilos para la lista de productos */
+.Productos-ul{
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: space-between;
+    margin-top: 5rem;
+    margin-bottom: 3rem;
+}
+
+/* Estilos para cada elemento de la lista de productos */
+.Impresoras-li{
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Estilos para el contenedor del texto de cada producto */
+.Impresoras-texto{
+    width: 50%;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    padding: 2rem;
+}
+
+/* Estilos para el título de cada producto */
+.Impresoras-h2{
+    font-size: 1.5em;
+    
+    color: rgb(153, 0, 0);
+}
+
+/* Estilos para el enlace de pedir presupuesto */
+.Impresoras-a{
+    padding: .3rem;
+
+    font-size: 1em;
+    color: rgb(0, 0, 0);
+    border: solid 1px;
+    border-radius: 5px;
+}
+
+/* Subrayado al pasar el mouse sobre el enlace */
+.Impresoras-a:hover{
+    text-decoration: underline;
+}
+
+/* Estilos para la imagen de cada producto */
+.Impresoras-img{
+    width: 50%;
+}
+
+/* Cambia el orden de la imagen y el texto para elementos impares */
+.Impresoras-li:nth-child(even) .Impresoras-texto{
+    order: 2
+}
+
+/* Cambia el orden de la imagen y el texto para elementos pares */
+.Impresoras-li:nth-child(odd) .Impresoras-img{
+    order: 1
+}
+
+/* Media query para pantallas de ancho inferior a 1024px */
+@media screen and ( max-width : 1024px ){ 
+
+    .Productos{
+        width: 90%;
+    }
+
+    .Impresoras-h2{
+        font-size: 1.3em;
+    }
+
+    .Impresoras-p{
+        font-size: .8em;
+    }
+
+    .Impresoras-a{
+        font-size: 1em;
+    }
+}
+
+/* Media query para pantallas de ancho inferior a 768px */
+@media screen and ( max-width : 768px ){ 
+    
+    .Productos{
+        width: 80%;
+    }
+
+    .Impresoras-li{
+        flex-flow: column nowrap;
+        gap: 1rem;
+    }
+
+    .Impresoras-img, .Impresoras-texto{
+        width: 100%;
+    }
+
+    .Impresoras-li, .Impresoras-texto{
+        order: 2;
+    }
+
+    .Impresoras-h2{
+        font-size: 1.5em;
+    }
+
+    .Impresoras-p{
+        font-size: 1em;
+    }
+
+    .Impresoras-a{
+        font-size: 1em;
+    }
+}
+
+/* Media query para pantallas de ancho inferior a 480px */
+@media screen and ( max-width : 480px ){ 
+    
+    .Productos{
+        width: 100%;
+    }
+
+    .Impresoras-h2{
+        font-size: 1.1em;
+    }
+
+    .Impresoras-p{
+        font-size: .8em;
+    }
+
+    .Impresoras-a{
+        font-size: .9em;
+    }
+}
