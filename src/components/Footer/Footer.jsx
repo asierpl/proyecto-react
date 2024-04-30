@@ -52,15 +52,15 @@ export const Footer = () => {
                     <ul className="Info-ul">
                         {/* Mapea y renderiza los elementos de 'pie.footerNav' utilizando el componente 'FooterNav' */}
                         {pie.footerNav.map (eachLi =>
-                            <FooterNav key={eachLi.id} {...eachLi} /> 
+                            <FooterNav key={eachLi.href} {...eachLi} /> 
                         )}
                     </ul>
                 </div>
                 <div className="Oficina-div">
                     <ul className="Oficina-ul">
                          {/* Mapea y renderiza los elementos de 'pie.footerOficina' utilizando el componente 'Oficina' */}
-                        {pie.footerOficina.map( oficina => 
-                            <Oficina key={oficina.id}{...oficina} />
+                        {pie.footerOficina.map( (oficina , index) => 
+                            <Oficina key={index}{...oficina} />
                         )}
                     </ul>
                 </div>

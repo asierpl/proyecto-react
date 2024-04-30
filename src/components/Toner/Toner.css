@@ -124,7 +124,7 @@ Toner.css
 
 /* Títulos de solicitud y comentarios */
 .Solicitud-h2, .Comentarios-h2{
-    font-size: 1.5rem;
+    font-size: 1.4rem;
     
     background-color: #b9b9b9;
     border: 1px solid rgb(145, 145, 145) ;
@@ -220,6 +220,10 @@ Toner.css
         font-size: 1em;
     }
 
+    .Solicitud-h2, .Comentarios-h2{
+        font-size: 1.2rem;
+    }
+
     .Botones-toner{
         display: flex;
         flex-flow: column;
@@ -244,6 +248,14 @@ Toner.css
 
     .AddToner-h2, .EditarToner-h2{
         font-size: 1.4em;
+    }
+}
+
+/* Media query para pantallas de ancho inferior a 768px */
+@media(max-width: 768px){
+
+    .Solicitud-h2, .Comentarios-h2{
+        font-size: 1.1em;
     }
 }
 
