@@ -39,6 +39,7 @@ export const Products = () => {
     return(
         <>
          <div className="Productos">
+            {/* Lista de todos los productos */}
             <ul className="Productos-ul">
                 {datos.productos && datos.productos.map( eachProducto =>
                     <Impresoras key={eachProducto.id}{...eachProducto} />

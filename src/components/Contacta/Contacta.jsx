@@ -46,25 +46,29 @@ export const Contacta = () => {
             <h1 className='Contacta-h1'>{contacta}</h1>
             <section className='Contacta-section'>
                 <div className="Contacta-container">
+                    {/* Sección de la información de teléfono */}
                     <div className="Contacta-tlf">
                         <h2 className='Telefono-h2'>{telefono}</h2>
                         <a href={`tel: ${numeroA}`} className='Telefono-a'>{numeroA}</a>
                         <a href={`tel: ${numeroB}`} className='Telefono-a'>{numeroB}</a>
                     </div>
+                    {/* Sección de la información de email */}
                     <div className="Contacta-email">
                         <h2 className='Correo-h2'>{correo}</h2>
                         <a href={`mailto: ${emailCanon}`} className='Correo-a'>{emailCanon}</a>
                         <a href={`mailto: ${emailBonanza}`} className='Correo-a'>{emailBonanza}</a>
                     </div>
+                    {/* Sección de la información de dirección */}
                     <div className="Direccion-oficina">
                         <h2 className='Calle-h2'>{esperamos}</h2>
                         <p className='Calle-p'>{calle}</p>
                         <p className='Calle-p'>{ciudad}</p>
                     </div>
                 </div>
-                    <div className="Oficina-container">
-                        <img src={srcUbi} alt={altUbi} className="Imagen-oficina" />
-                    </div>
+                {/* Contenedor de la imagen de la oficina */}
+                <div className="Oficina-container">
+                    <img src={srcUbi} alt={altUbi} className="Imagen-oficina" />
+                </div>
             </section>
         </div>
         </>

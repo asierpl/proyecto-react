@@ -71,6 +71,8 @@ export const Toner = () => {
         } catch (error) {
             console.log(error)
         }
+        colorRef.current.reset()
+        comentarioRef.current.reset()
     }
 
     //Función para eliminar un tóner existente.
@@ -175,12 +177,15 @@ export const Toner = () => {
                 <AddToner/>
                 <EditarToner/>
             </div>
+
             {/* Encabezados de las listas de solicitudes */}
+            {datos.toner.length > 0 && (
             <div className="Solicitud-comentario">
                 <h2 className="Solicitud-h2">Solicitud</h2>
                 <h2 className="Comentarios-h2">Comentarios</h2>
                 <h2 className="Boton-h2"></h2>
             </div>
+            )}
 
             {/* Contenedor para la lista de solicitudes */}
             <div className="SolicitudToner-container">
