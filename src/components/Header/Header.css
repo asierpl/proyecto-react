@@ -90,7 +90,7 @@ el menú de navegación y la línea horizontal separadora.
     font-family: Century Gothic, Arial, Helvetica, sans-serif;
     font-weight: bolder;
     font-size: 1.1em;
-
+    text-shadow: 1px 1px 1px rgba(114, 114, 114, 0.5);
     color: rgb(48, 48, 48);
 }
 
