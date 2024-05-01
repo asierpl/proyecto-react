@@ -6,7 +6,7 @@ Toner.css
 
 /* Contenedor principal de la información introductoria */
 .Toner-info{
-    width: 50%;
+    width: 80%;
     margin: auto;
     display: flex;
     flex-flow: column;
@@ -28,7 +28,8 @@ Toner.css
 /* Párrafo de texto introductorio */
 .Toner-p{
     font-family: Century Gothic, Arial, Helvetica, sans-serif;
-    font-size: 1.2em;
+    font-size: 1em;
+    font-weight: bold;
     line-height: 1;
 }
 
