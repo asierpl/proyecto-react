@@ -49,6 +49,15 @@ Carrousel.css
     z-index: 3;
 }
 
+@media (max-width: 768px){
+
+    .Boton-left, .Boton-right{
+        width: 2.5rem;
+        height: 2.5rem;
+        border: solid 1px rgb(0, 0, 0);
+    }
+}
+
 @media (max-width: 480px){
 
     .Boton-left, .Boton-right{
