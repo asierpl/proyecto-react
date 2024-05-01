@@ -114,7 +114,7 @@ el menú de navegación y la línea horizontal separadora.
         opacity: 0;
         transition: all 1s ease;
         overflow: hidden;
-        z-index: 2;
+        z-index: 1;
     }
    
     .Header-nav.isVisible{
@@ -124,6 +124,7 @@ el menú de navegación y la línea horizontal separadora.
        padding: 1rem;
        background-color: black;
        opacity: 1;
+       z-index: 5;
     }
    
     .HeaderNav-ul{
