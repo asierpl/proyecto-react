@@ -260,15 +260,15 @@ Toner.css
       width: 80%;
     }
     .Solicitud-h2, .Comentarios-h2{
-        font-size: 1em;
+        font-size: .7em;
         padding: .5rem;
     }
     .Toner-update , .Toner-delete{
-        font-size: .7em; 
+        font-size: .6em; 
         padding: .3rem;
     }
     .ColorToner-div, .ComentarioToner-div{
-        font-size: .8em;
+        font-size: .7em;
     }
     .AddToner-h2, .EditarToner-h2{
         font-size: 1.3em;
