@@ -10,7 +10,6 @@ Inicio.css
 .Inicio{
     width: 80%;
     margin: auto;
-
     text-align: center;
 }
 
@@ -18,24 +17,20 @@ Inicio.css
 .Inicio-h2{
     min-height: 5vh;
     margin: 5rem 0 2rem 0;
-
     font-family: Century Gothic, Arial, Helvetica, sans-serif;
     font-size: 3.3em;
     font-weight:600;
     line-height: 1;
-
     color: rgb(175, 6, 6);
 }
 
 .Inicio-h3{
     min-height: 5vh;
     margin: 3rem 0 5rem 0;
-
     font-family: Century Gothic, Arial, Helvetica, sans-serif;
     font-size: 2.5em;
     font-weight: bold;
     line-height: 1;
-
     color: rgb(175, 6, 6);
 }
 
@@ -53,7 +48,6 @@ Inicio.css
 .Inicio-imgA, .Inicio-imgB{
     width: 30rem;
     margin-bottom: 4rem;
-
     object-fit: contain;
 }
 
@@ -61,12 +55,10 @@ Inicio.css
 .Ofrecer-h3{
     min-height: 5vh;
     margin: 3rem 0 3rem 0;
-
     font-family: Century Gothic, Arial, Helvetica, sans-serif;
     font-size: 2.5em;
     font-weight: bold;
     line-height: 1;
-    
     color: rgb(175, 6, 6);
 }
 
@@ -75,7 +67,6 @@ Inicio.css
     width: 80%;
     margin: auto;
     margin-bottom: 5rem;
-
     font-family: Century Gothic, Arial, Helvetica, sans-serif;
     font-size: 1.2em;
     text-align: start;
@@ -96,7 +87,6 @@ Inicio.css
     justify-content: space-around;
     align-items:flex-start;
     gap: 2rem;
-
     text-align: center;
 }
 
@@ -105,7 +95,6 @@ Inicio.css
     width: 32%;
     min-height: 30vh;
     padding: 2rem;
-
     background: #fecacc;
     border-radius: 21px;
     box-shadow:  5px 5px 37px #989898,
@@ -115,10 +104,8 @@ Inicio.css
 /* Imagen en elementos de ofrecimiento */
 .Ofrecemos-img{
     top: 0;
-
     width: 4em;
     margin: auto;
-
     color: rgb(175, 6, 6);
 }
 
@@ -127,18 +114,15 @@ Inicio.css
     width: 100%;
     min-height: 5vh;
     margin-top: 1rem;
-
     font-size: 1.7em;
     font-family: Century Gothic, Arial, Helvetica, sans-serif;
     line-height: 1;
-
     color: rgb(175, 6, 6);
 }
 
 /* Párrafo en elementos de ofrecimientos */
 .Ofrecemos-p{
     margin-top: 1rem;
-
     font-family: Century Gothic, Arial, Helvetica, sans-serif;
     font-size: 1em;
     text-align: start;
@@ -150,11 +134,9 @@ Inicio.css
     .Ofrecemos-ul{
        width: 90%;
     }
-
     .Ofrecemos-p{
         font-size: 1em;
     }
-
     .Inicio-imgA, .Inicio-imgB{
         width: 40%;
     }
@@ -171,14 +153,11 @@ Inicio.css
         flex-flow: column nowrap;
         justify-content: space-around;
         align-items:center;
-        
         text-align: center;
     }
-
     .Ofrecemos-li{
         width: 70%;
     }
-
     .Inicio-imgA, .Inicio-imgB{
         width: 40%;
     }
@@ -190,44 +169,34 @@ Inicio.css
     .Ofrecemos-li{
         width: 90%;
     }
-
     .Inicio-imgA, .Inicio-imgB{
         width: 45%;
     }
-
     .Offer-p{
         width: 100%;
         font-size: 1em;
     }
-
     .Inicio-h2{
         font-size: 2.5em;
     }
-    
     .Inicio-h3{
         font-size: 2em;
     }
-
     .Inicio-div{
        gap: 2rem;
     }
-
     .Ofrecer-h3{
         font-size: 2em;
     }
-
     .Offer-p{
        font-size: 1em;
     }
-    
     .Ofrecemos-img{
         width: 3.5rem;
     }
-
     .Ofrecemos-h4{
         font-size: 1.7em;
     }
-
     .Ofrecemos-p{
         font-size: .9em;
     } 
@@ -239,34 +208,26 @@ Inicio.css
     .Inicio-h2{
         font-size: 2em;
     }
-
     .Inicio-h3{
         font-size: 1.7em;
     }
-
     .Inicio-div{
        gap: 1.5rem;
     }
-
     .Ofrecer-h3{
         margin: 0 0 1rem 0;
-
         font-size: 1.7em;
     }
     .Offer-p{
        font-size: .8em;
     }
-    
     .Ofrecemos-img{
         width: 3rem;
     }
-
     .Ofrecemos-h4{
         font-size: 1.5em;
     }
-    
     .Ofrecemos-p{
         font-size: .8em;
     }
-    
 }

@@ -7,7 +7,6 @@ Footer.css
 /* Estilos para el pie de página */
 .Footer{
     width: 100%;
-
     background: #4f4f4f;
     border-radius: 0px;
     box-shadow:  9px 9px 37px #202020,
@@ -23,7 +22,6 @@ Footer.css
     justify-content: space-between;
     align-items: flex-start;
     padding: 2rem;
-
     color: rgb(218, 218, 218);
 }
 
@@ -38,9 +36,7 @@ Footer.css
     align-items: center;
     gap: 1rem;
     padding: 1.5rem;
-
     text-align: start;
-
     border-radius: 20px;
 }
 
@@ -73,7 +69,6 @@ Footer.css
 
 .Oficina-ul{
     gap: 1rem;
-
     text-align: start; 
 }
 
@@ -92,7 +87,6 @@ Footer.css
     .Footer-container{
         width: 90%;
     }    
-
     .Footer-div, .Oficina-div, .Info-div{
         align-items: start;
     }
@@ -107,12 +101,10 @@ Footer.css
         flex-flow: column nowrap;
         justify-content: center;
         align-items: center;
-    }    
-
+    }   
     .Footer-div, .Oficina-div, .Info-div{
        width: 50%;
        margin: 2rem ;
-       
        background-color: #414141;
     }
     .FooterNav-li{

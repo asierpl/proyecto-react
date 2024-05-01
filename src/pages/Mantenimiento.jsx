@@ -26,7 +26,6 @@ export const Mantenimiento = () => {
         }
     } , [])
 
-
     //Retorna el contenido del componente
     return (
         <>

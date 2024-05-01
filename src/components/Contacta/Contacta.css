@@ -20,7 +20,6 @@ Contacta.css
 .Contacta-h1{
     font-size: 2.5em;
     font-weight: bolder;   
-
     color: rgb(175, 6, 6);
 }
 
@@ -44,7 +43,6 @@ Contacta.css
     align-items: center;
     gap: 1rem;
     padding: 3rem;
-
     text-align: center;
 }
 
@@ -53,19 +51,16 @@ Contacta.css
     width: 25%;
     padding: 1rem;
     border-radius: 10px;
-
     background-color: rgb(175, 6, 6);
 }
 
 /* Estilos para los encabezados de los elementos de contacto */
 .Calle-h2 , .Correo-h2 , .Telefono-h2{
     margin-bottom: 2rem;
-   
     font-family: Century Gothic, Arial, Helvetica, sans-serif;
     font-size: 1.5em;
     font-weight: bold;
     text-decoration: underline;
-
     color: rgb(175, 6, 6);
     color: white;
 }
@@ -73,7 +68,6 @@ Contacta.css
 /* Estilos para los párrafos de los elementos de contacto */
 .Calle-p, .Ciudad-p, .Correo-a , .Telefono-a{
     font-size: 1.1em;
-
     color: white;
 }
 
@@ -89,11 +83,10 @@ Contacta.css
 
 /* Media query para pantallas de ancho inferior a 1328px */
 @media(max-width: 1328px){
-    
+
     .Contacta-tlf , .Contacta-email , .Direccion-oficina{
         width: 30%;
     }
-
     .Calle-h2 , .Correo-h2 , .Telefono-h2{
         font-size: 1.4em;
     }
@@ -105,15 +98,12 @@ Contacta.css
     .Contacta-tlf , .Contacta-email , .Direccion-oficina{
         width: 35%;
     }
-
     .Calle-h2 , .Correo-h2 , .Telefono-h2{
         font-size: 1em;
     }
-
     .Calle-p, .Ciudad-p, .Correo-a , .Telefono-a{
         font-size: .9em;
     }
-
     .Oficina-container{
         width: 80%;
     }
@@ -126,27 +116,21 @@ Contacta.css
         display: flex;
         flex-flow: column;
     }
-    
     .Contacta-h1{
         width: 80%;
-
         font-size: 2.3em;
         text-align: center;
         line-height: 1;
     }
-
     .Contacta-tlf , .Contacta-email , .Direccion-oficina{
         width: 50%;
     }
-
     .Calle-h2 , .Correo-h2 , .Telefono-h2{
         font-size: 1.2em;
     }
-
     .Calle-p, .Ciudad-p, .Correo-a , .Telefono-a{
         font-size: 1em;
     }
-
     .Oficina-container{
         width: 100%;
     }
@@ -161,11 +145,9 @@ Contacta.css
         font-size: 2em;
         text-align: center;
     }
-
     .Contacta-tlf , .Contacta-email , .Direccion-oficina{
         width: 90%;
     }
-
     .Oficina-container{
         width: 100%;
     }
@@ -177,7 +159,6 @@ Contacta.css
     .Calle-h2 , .Correo-h2 , .Telefono-h2{
         font-size: 1em;
     }
-
     .Calle-p, .Ciudad-p, .Correo-a , .Telefono-a{
         font-size: .8em;
     }

@@ -26,7 +26,6 @@ export const Quienes = () => {
         }
     } , [])
 
-
     //Retorna el contenido del componente
     return (
         <>
@@ -37,4 +36,3 @@ export const Quienes = () => {
         </>
     )
 }
-

@@ -41,14 +41,12 @@ Products.css
 /* Estilos para el título de cada producto */
 .Impresoras-h2{
     font-size: 1.5em;
-    
     color: rgb(153, 0, 0);
 }
 
 /* Estilos para el enlace de pedir presupuesto */
 .Impresoras-a{
     padding: .3rem;
-
     font-size: 1em;
     color: rgb(0, 0, 0);
     border: solid 1px;
@@ -81,15 +79,12 @@ Products.css
     .Productos{
         width: 90%;
     }
-
     .Impresoras-h2{
         font-size: 1.3em;
     }
-
     .Impresoras-p{
         font-size: .8em;
     }
-
     .Impresoras-a{
         font-size: 1em;
     }
@@ -101,28 +96,22 @@ Products.css
     .Productos{
         width: 80%;
     }
-
     .Impresoras-li{
         flex-flow: column nowrap;
         gap: 1rem;
     }
-
     .Impresoras-img, .Impresoras-texto{
         width: 100%;
     }
-
     .Impresoras-li, .Impresoras-texto{
         order: 2;
     }
-
     .Impresoras-h2{
         font-size: 1.5em;
     }
-
     .Impresoras-p{
         font-size: 1em;
     }
-
     .Impresoras-a{
         font-size: 1em;
     }
@@ -134,15 +123,12 @@ Products.css
     .Productos{
         width: 100%;
     }
-
     .Impresoras-h2{
         font-size: 1.1em;
     }
-
     .Impresoras-p{
         font-size: .8em;
     }
-
     .Impresoras-a{
         font-size: .9em;
     }

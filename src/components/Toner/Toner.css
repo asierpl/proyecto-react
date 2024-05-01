@@ -22,7 +22,6 @@ Toner.css
     font-size: 2em;
     font-weight: bold;
     line-height: 1;
-    
     color: rgb(175, 6, 6);
 }
 
@@ -60,7 +59,6 @@ Toner.css
     align-items: flex-start;
     margin-bottom: 2rem;
     padding: 1.5rem;
-    
     border-radius: 5px;
     background-color: white;
     border-radius: 1rem;
@@ -72,7 +70,6 @@ Toner.css
 .AddToner-h2, .EditarToner-h2{
     font-size: 1.5rem;
     font-weight: bolder;
-
     color: rgb(182, 30, 30);
 }
 
@@ -86,7 +83,6 @@ Toner.css
     width: 100%;
     margin: 1rem 0;
     padding: 0.5rem;
-
     background-color: #e0e0e0;
     border: 0.2rem solid rgb(182, 30, 30);
 }
@@ -98,12 +94,10 @@ Toner.css
     justify-content: center;
     margin: 2rem 1rem 2rem 0rem;
     padding: 0.5rem;
-
     background-color: rgb(182, 30, 30);
     border: 0.2rem solid rgb(182, 30, 30);
     border-radius: 0.25rem;
     color: white;
-
     cursor: pointer;
 }
 
@@ -111,7 +105,6 @@ Toner.css
 .Solicitud-h2, .ColorToner-div,.Comentarios-h2, .ComentarioToner-div {
     width: 25%;
     padding: 1rem;
-
     background-color: #e0e0e0;
     border: 1px solid rgb(145, 145, 145) ;
     border-radius: 5px;
@@ -125,7 +118,6 @@ Toner.css
 /* Títulos de solicitud y comentarios */
 .Solicitud-h2, .Comentarios-h2{
     font-size: 1.4rem;
-    
     background-color: #b9b9b9;
     border: 1px solid rgb(145, 145, 145) ;
     border-radius: 5px;
@@ -162,9 +154,7 @@ Toner.css
     gap: 1rem;
     align-items: center;
     margin-bottom: .5rem;
-
     text-align: start;
-
     border-radius: 5px;
 }
 
@@ -178,14 +168,11 @@ Toner.css
 /* Estilos de los botones de editar y eliminar */
 .Toner-update , .Toner-delete{
     padding: .5rem 1rem;
-
     font-size: .8em;
-    
     background-color: #2196f3;
     color: white;
     border: none;
     border-radius: 3px;
-    
     transition: background-color .5s ease;
     cursor: pointer;
 }
@@ -211,41 +198,31 @@ Toner.css
     .Toner-info{
         width: 80%;
     }
-
     .Toner-h2{
         font-size: 1.7em;
     }
-
     .Toner-p{
         font-size: 1em;
     }
-
     .Solicitud-h2, .Comentarios-h2{
         font-size: 1.2rem;
     }
-
     .Botones-toner{
         display: flex;
         flex-flow: column;
         justify-content: center;
         gap: .2rem;
-
         font-size: 1em;
     }
-
     .Boton-h2 , .Botones-toner{
         width: 15%;
     }
-
     .Mantenimiento{
         width: 100%;
     }
-
     .Input-enviar{
-        width: 40%;
-        
+        width: 40%;  
     }
-
     .AddToner-h2, .EditarToner-h2{
         font-size: 1.4em;
     }
@@ -265,16 +242,13 @@ Toner.css
     .Toner-info{
         width: 85%;
     }
-
     .Toner-h2{
         font-size: 1.3em;
         text-align: center;
     }
-
     .Toner-p{
         font-size: .9em;
     }
-
     .Formularios-div{
         width: 100%;
         display: flex;
@@ -282,25 +256,20 @@ Toner.css
         justify-content: center;
         align-items: center;
     }
-
     .Add-container, .Editar-container{
       width: 80%;
     }
-
     .Solicitud-h2, .Comentarios-h2{
         font-size: 1em;
         padding: .5rem;
     }
-
     .Toner-update , .Toner-delete{
         font-size: .7em; 
         padding: .3rem;
     }
-
     .ColorToner-div, .ComentarioToner-div{
         font-size: .8em;
     }
-
     .AddToner-h2, .EditarToner-h2{
         font-size: 1.3em;
     }

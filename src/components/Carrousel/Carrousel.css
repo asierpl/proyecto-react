@@ -7,10 +7,8 @@ Carrousel.css
 /* Contenedor del carrousel */
 .Carrousel{
     position: relative;
-
     width: 100%;
     margin: auto;
-
     overflow: hidden;
 }
 
@@ -19,14 +17,12 @@ Carrousel.css
     display: grid;
     grid-template-columns: repeat(auto-fit , minmax(300px , 1fr));
     min-height: 70vh;
-
     transition: all .5s ease;
 }
 
 /* Imágenes del carrousel */
 .Photos{
     height: 70vh;
-
     object-fit: cover;
 }
 
@@ -35,22 +31,20 @@ Carrousel.css
     position: absolute;
     top: calc( 50% - 2rem );
     right: 0;
-
-    width: 3rem;
-    height: 3rem;
-
+    width: 4rem;
+    height: 4rem;
     color: black;
+    border: solid 2px rgb(0, 0, 0);
 }
+
 /* Botón para desplazar a la izquierda las imágenes */
 .Boton-left{
     position: absolute;
     top: calc( 50% - 2rem );
     left: 0;
-
-    width: 3rem;
-    height: 3rem;
-    
+    width: 4rem;
+    height: 4rem;
     color: black;
-
+    border: solid 2px rgb(0, 0, 0);
     z-index: 3;
 }

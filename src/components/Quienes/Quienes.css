@@ -13,21 +13,17 @@ Quienes.css
 /* Estilos para el título principal de la sección */
 .Quienes-h2{
     margin: 4rem 0 2rem 0;
-
     font-family: Century Gothic, Arial, Helvetica, sans-serif;
     font-size: 2.5em;
     font-weight: bolder;
-
     color: rgb(175, 6, 6);
 }
 
 /* Estilos para el párrafo de introducción de la sección */
 .Quienes-p{
     margin: 2rem 0;
-
     font-family: Century Gothic, Arial, Helvetica, sans-serif;
     font-size: 1.2em;
-
     color: #2b2b2b;
 }
 
@@ -38,7 +34,6 @@ Quienes.css
     display: grid;
     grid-template-columns: repeat(auto-fit , minmax(250px , 1fr));
     gap: 1rem;
-
     overflow-y: auto;
 }
 
@@ -56,10 +51,8 @@ Quienes.css
     width: 20rem;
     height: 15rem;
     margin: auto;
-
     border-radius: 5px;
     background: linear-gradient(145deg, #cacaca, #f0f0f0);
-    
     object-fit: cover;
     transition: all .5s ease;
     cursor: pointer;
@@ -80,7 +73,6 @@ Quienes.css
     position: fixed;
     top: 0;
     left: 0;
-
     width: 100%;
     height: 100%;
     display: flex;
@@ -88,7 +80,6 @@ Quienes.css
     justify-content: center;
     align-items: center;
     gap: 1rem;
-
     opacity: 0;
     pointer-events: none;
 }
@@ -103,11 +94,9 @@ Quienes.css
 .Lightbox-btn{
     width: 2rem;
     padding: .3rem;
-
     color: rgb(255, 255, 255);
     background-color: rgb(226, 9, 9);
     border-radius: 50%;
-
     cursor: pointer;
     transition: all .5s ease;
 }
@@ -127,7 +116,6 @@ Quienes.css
     width: 90%;
     max-width: 40rem;
     height: 50vh;
-
     border-radius: 19px;
     background: linear-gradient(145deg, #cacaca, #f0f0f0);
     
@@ -154,7 +142,6 @@ Quienes.css
 .Equipo-img{
     width: 100%;
     max-height: 100%;
-
     object-fit: cover;
 }
 
@@ -172,14 +159,12 @@ Quienes.css
     font-family: Century Gothic, Arial, Helvetica, sans-serif;
     font-size: 2em;
     font-weight: bolder;
-
     color: rgb(175, 6, 6);
 }
 
 /* Estilos para el párrafo los valores de la empresa */
 .Valores-p{
     margin: 0 0 2rem 0;
-
     font-family: Century Gothic, Arial, Helvetica, sans-serif;
     font-size: 1em;
 }
@@ -192,7 +177,6 @@ Quienes.css
     gap: 2rem;
     flex-grow: 1;
     margin: 0;
-
     font-family: Century Gothic, Arial, Helvetica, sans-serif;
     font-size: 1em;
     font-weight: bolder;
@@ -217,7 +201,6 @@ Quienes.css
     .Valores{
       gap: .5rem;
     }
-
     .Valor-p{
         font-size: .9em;
     }
@@ -229,20 +212,16 @@ Quienes.css
     .Valores{
         flex-flow: column nowrap;
     }
-
     .EquipoImg-div{
         width: 100%;
     }
-
     .Valores-div{
         width: 100%;
         margin: 0;
     }
-
     .Valores-h3{
         margin: 2.5rem 0 1.5rem 0;
     }
-
     .Valor-p{
         font-size: .9em;
     }
@@ -266,15 +245,12 @@ Quienes.css
     .Quienes-h2{
         font-size: 1.7em;
     }
-
     .Quienes-p{
         font-size: .9em;
     }
-
     .Valores-p{
         font-size: .8em;
     }
-
     .Valor-p{
         font-size: .8em;
     }

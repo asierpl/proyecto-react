@@ -9,7 +9,6 @@ import { useEffect} from "react"
 //Importa el componente 'Form' que es el formulario de inicio de sesión
 import { Form } from '../components/Login/Form'
 
-
 //Exporta y define el componente 'Login'
 export const Login = () => {
     //Utiliza useNavigate para la navegación
