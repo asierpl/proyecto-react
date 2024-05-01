@@ -48,3 +48,12 @@ Carrousel.css
     border: solid 2px rgb(0, 0, 0);
     z-index: 3;
 }
+
+@media (max-width: 480px){
+
+    .Boton-left, .Boton-right{
+        width: 2rem;
+        height: 2rem;
+        border: solid 1px rgb(0, 0, 0);
+    }
+}
