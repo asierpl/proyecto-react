@@ -62,11 +62,12 @@ export const Toner = () => {
 
         //Envío de la solicitud fetch para agregar un nuevo tóner a la API
         try {
-            await fetch(`${VITE_URL_API}/mantenimiento` , options)
-            
+            const response = await fetch(`${VITE_URL_API}/mantenimiento` , options)
+            const data = await response.json()
+
             //Actualización del estado para reflejar el nuevo tóner
-            setDatos(eachData => ({
-                ...eachData, toner : [...eachData.toner , nuevoToner]}))
+            setDatos({ toner : data.toner })
+            setNuevoId( data.nuevoId )
 
         } catch (error) {
             console.log(error)
