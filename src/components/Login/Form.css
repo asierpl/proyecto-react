@@ -118,7 +118,7 @@ Form.css
 /* Estilos para el contenedor de la imagen de fondo */
 .Portada-container{
     width: 100%;
-    min-height: 85vh;
+    height: 75vh;
     background: url("/assets/impresoras44.JPG") no-repeat center center / cover;
 }
 
@@ -127,7 +127,7 @@ Form.css
   position: fixed;
   left: 50%;
   top: 35%; 
-  width: 50%;
+  width: 60%;
   font-family: Century Gothic, Arial, Helvetica, sans-serif;
   font-size: 4em;
   font-weight: bolder;
@@ -187,7 +187,7 @@ Form.css
     }
     .Bienvenida{
         width: 70%;
-        font-size: 3.5em;
+        font-size: 3em;
     }
 }
 
@@ -216,7 +216,8 @@ Form.css
         width: 6rem;
     }
     .Bienvenida{
-        font-size: 3em;
+        width: 80%;
+        font-size: 2.5em;
     }
 }
 
@@ -233,6 +234,7 @@ Form.css
         left: 50%;
         top: 30%;
         width: 90%;
-        font-size: 2em;
+        font-size: 1.5em;
     }
 }
+
