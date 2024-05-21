@@ -124,12 +124,12 @@ Form.css
 
 /* Estilos para el texto de bienvenida */
 .Bienvenida{
-  position: absolute;
+  position: fixed;
   left: 50%;
-  top: 40%; 
-  width: 70%;
+  top: 35%; 
+  width: 50%;
   font-family: Century Gothic, Arial, Helvetica, sans-serif;
-  font-size: 5em;
+  font-size: 4em;
   font-weight: bolder;
   text-align: center;
   line-height: 1.1;
@@ -139,11 +139,25 @@ Form.css
   z-index: 2;
 }
 
+.Extra-div{
+
+}
+.Extra-p{
+    color: red;
+}
+
+/* Media query para pantallas de ancho inferior a 1328px */
+@media (max-width : 1328px){
+    .Bienvenida{
+        width: 70%;
+    }
+}
+
 /* Media query para pantallas de ancho inferior a 1024px */
 @media (max-width : 1024px){
     .Bienvenida{
         width: 90%;
-        font-size: 4.5em;
+        
     }
 }
 
@@ -172,8 +186,8 @@ Form.css
         width: 6rem;
     }
     .Bienvenida{
-        width: 90%;
-        font-size: 4em;
+        width: 70%;
+        font-size: 3.5em;
     }
 }
 

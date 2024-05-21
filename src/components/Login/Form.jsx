@@ -144,6 +144,11 @@ export const Form = () => {
                             <div className="Caja-continuar">
                                 <input type={typeI}   value={valueI} />
                             </div>
+                            {/* Temporal para usuarios que visiten mi GitHub */}
+                            <div className="Extra-div">
+                                <p className="Extra-p"> Usuario : asier</p>
+                                <p className="Extra-p"> Contraseña : asier</p>
+                            </div>
     
                         </form>
                     
@@ -191,7 +196,11 @@ export const Form = () => {
                         <div className="Caja-continuar">
                             <input type={typeC}   value={valueC} />
                         </div>
-                        
+
+                        {/* Temporal para usuarios que visiten mi GitHub */}
+                        <div className="Extra-div">
+                                <p className="Extra-p"> Deshabilitado</p>
+                        </div>
                     </form>
 
                 </div>
