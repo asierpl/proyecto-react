@@ -133,6 +133,8 @@ Form.css
   font-weight: bolder;
   text-align: center;
   line-height: 1.1;
+  border-radius: 15px;
+  background-color: rgb(165, 25, 25);
   color: rgb(255, 255, 255);
   text-shadow: 5px 8px 8px rgba(0, 0, 0, 0.5);
   transform: translate(-50% , -50%);
